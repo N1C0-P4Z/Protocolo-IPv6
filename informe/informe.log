@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.3.21)  22 MAR 2025 21:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.3.21)  22 MAR 2025 21:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/nicolas/Escritorio/IPv6/informe.tex
-(/home/nicolas/Escritorio/IPv6/informe.tex
+**/home/nicolas/Escritorio/IPv6/informe/informe.tex
+(/home/nicolas/Escritorio/IPv6/informe/informe.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -518,12 +518,12 @@ Package rerunfilecheck Info: File `informe.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  10972 strings out of 474222
- 172331 string characters out of 5748733
+ 172355 string characters out of 5748733
  1944975 words of memory out of 5000000
  33072 multiletter control sequences out of 15000+600000
  607629 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,11n,79p,409b,524s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,11n,79p,417b,524s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
 Output written on informe.pdf (4 pages, 135083 bytes).
 PDF statistics:

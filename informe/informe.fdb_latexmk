@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1742689577.98124 "/home/nicolas/Escritorio/IPv6/informe.tex" "informe.pdf" "informe" 1742689579.36747 0
+["pdflatex"] 1742690364.99648 "/home/nicolas/Escritorio/IPv6/informe/informe.tex" "informe.pdf" "informe" 1742690366.30156 0
   "/etc/texmf/web2c/texmf.cnf" 1742604534.61896 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/nicolas/Escritorio/IPv6/informe.tex" 1742689577.61474 4591 8fc029cf978a781eb93f6bde3eb1512d ""
+  "/home/nicolas/Escritorio/IPv6/informe/informe.tex" 1742690364.606 4591 8fc029cf978a781eb93f6bde3eb1512d ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm0600.tfm" 1136768653 3584 291a5713401683441e0a8c8f4417b17b ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm1200.tfm" 1136768653 3584 f80ddd985bd00e29e9a6047ebd9d4781 ""
@@ -97,10 +97,10 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1742604585.38781 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1742604844 8212845 f1a146408059eb417cd4c48e8545de31 ""
-  "informe.aux" 1742689579.07274 1196 272c6e37376827c38bc6326ee12cf408 "pdflatex"
-  "informe.out" 1742689579.07774 1237 afa18d9f40cc0f98debecc031f43c73f "pdflatex"
-  "informe.tex" 1742689577.61474 4591 8fc029cf978a781eb93f6bde3eb1512d ""
-  "informe.toc" 1742689579.07874 615 8d703594e51b14f2e42b429930b74446 "pdflatex"
+  "informe.aux" 1742690366.127 1196 272c6e37376827c38bc6326ee12cf408 "pdflatex"
+  "informe.out" 1742690366.13 1237 afa18d9f40cc0f98debecc031f43c73f "pdflatex"
+  "informe.tex" 1742690364.606 4591 8fc029cf978a781eb93f6bde3eb1512d ""
+  "informe.toc" 1742690366.131 615 8d703594e51b14f2e42b429930b74446 "pdflatex"
   (generated)
   "informe.aux"
   "informe.log"

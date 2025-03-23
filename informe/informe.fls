@@ -1,9 +1,9 @@
-PWD /home/nicolas/Escritorio/IPv6
+PWD /home/nicolas/Escritorio/IPv6/informe
 INPUT /etc/texmf/web2c/texmf.cnf
 INPUT /usr/share/texmf/web2c/texmf.cnf
 INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
-INPUT /home/nicolas/Escritorio/IPv6/informe.tex
+INPUT /home/nicolas/Escritorio/IPv6/informe/informe.tex
 OUTPUT informe.log
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/article.cls
