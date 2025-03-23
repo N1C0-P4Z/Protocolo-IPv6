@@ -1,0 +1,101 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}      % Codificación UTF-8 para caracteres en español
+\usepackage[T1]{fontenc}         % Buena salida de fuentes
+\usepackage[spanish]{babel}      % Traducción de elementos automáticos al español
+\usepackage{lmodern}             % Fuente mejorada
+\usepackage{hyperref}            % Para enlaces
+\usepackage{graphicx}            % Para incluir imágenes (PNG)
+\usepackage{bytefield}           % Para dibujar diagramas PDU
+\usepackage{geometry}            % Para ajustar márgenes
+\geometry{left=2.5cm, right=2.5cm, top=3cm, bottom=3cm}
+
+\title{Reporte de Laboratorio: IPv6 en Packet Tracer}
+\author{Martín Moloeznik, Nicolás Paz Reyes\\[0.5em]
+Grupo: Integrantes del grupo (si aplica)\\[0.5em]
+Repositorio: \url{https://github.com/tu_usuario/tu_repositorio}}
+\date{\today}
+
+\begin{document}
+
+% Carátula
+\begin{titlepage}
+  \centering
+  \vspace*{2cm}
+  {\Large \textbf{Reporte de Laboratorio: IPv6 en Packet Tracer}}\\[1.5cm]
+  
+  {\large Integrantes:}\\
+   \bigskip
+  {\large Martín Moloeznik, Nicolás Paz Reyes} \\[0.5cm]
+  {\large {martinmoloeznik@gmail.com}, {rubenpaz2105@gmail.com}} \\[0.5cm]
+  \bigskip
+  {\large Repositorio: \url{https://github.com/N1C0-P4Z/Protocolo-IPv6}}\\[1cm]
+  
+  \vfill
+  {\large \today}
+\end{titlepage}
+
+% Índice (opcional)
+\tableofcontents
+\newpage
+
+% Sección de Introducción
+\section{Introducción}
+En este documento se detallan los escenarios configurados en Packet Tracer para la práctica de IPv6. Se explica la configuración de las direcciones, el uso de SLAAC, el funcionamiento del Neighbor Discovery Protocol (NDP) y otros conceptos relevantes.
+
+% Sección 1: Escenarios y Configuraciones
+\section{Escenario 1: Configuración de IPv6 y SLAAC}
+\subsection{Configuración del Router}
+Aquí se detalla la configuración necesaria en el router, incluyendo la activación de IPv6, asignación de direcciones LLA y GUA, y otros comandos.
+
+\subsection{Observación de PDUs y Diagramas}
+Utilizando el paquete \texttt{bytefield} se pueden dibujar diagramas de los campos de los mensajes ICMPv6, por ejemplo: \\
+
+\begin{bytefield}[boxformatting={\centering\itshape},bitwidth = 1.1em]{32}
+  \begin{rightwordgroup}{Header}
+    \bitbox{16}{48 bit mac} & \bitbox{16}{00-E0-F9-98-8A-07}\\
+    \bitbox{16}{separar medio} & \bitbox{16}{00-E0-F9 \hspace{1.2cm} 98-8A-07}\\
+    \bitbox{16}{insertar FF-FE} & \bitbox{16}{00-E0-F9 FF-FE 98-8A-07}\\
+    \bitbox{16}{ primeros 2 hexa} & \bitbox{16}{0000-0000-E0-F9   FF-FE   98-8A-07}\\
+    \bitbox{16}{48 bit mac} & \bitbox{16}{00-E0-F9-98-8A-07}\\
+    \bitbox{16}{48 bit mac} & \bitbox{16}{00-E0-F9-98-8A-07}\\
+    \bitbox{16}{48 bit mac} & \bitbox{16}{00-E0-F9-98-8A-07}
+
+  \end{rightwordgroup}
+\end{bytefield}
+
+\bigskip
+\begin{bytefield}[boxformatting={\centering\itshape},bitwidth = 1.1em]{32}
+  \bitheader{0,4,12,32} \\
+  \begin{rightwordgroup}{Header}
+  \bitbox{4}{Ver:6} & \bitbox{8}{TRFC} & \bitbox{20}{FLOW LABEL}\\
+  \bitbox{16}{PL:12} & \bitbox{8}{NEXT:0x3a} & \bitbox{8}{HOP LIMIT:255}\\ 
+  \bitbox{32}{SRC IP:FE80::2E0:F9FF:FE98:8A07}
+  \end{rightwordgroup}
+\end{bytefield}
+
+
+
+Este paquete es muy útil para representar gráficamente la estructura de los paquetes (PDU), facilitando la explicación de campos y su función en protocolos como IPv6. Se recomienda su uso cada vez que se necesite visualizar la segmentación de datos en un diagrama, lo que ayuda a clarificar cómo se organiza la información en cada mensaje.
+
+% Sección 2: Escenario 2: Neighbor Discovery
+\section{Escenario 2: Neighbor Discovery y NDP}
+En esta sección se describe el proceso de descubrimiento de vecinos en IPv6, incluyendo:
+\begin{itemize}
+  \item Configuración de las interfaces en el router y dispositivos.
+  \item Flujo de mensajes de NDP y explicación de cada uno (por ejemplo, RS y RA).
+  \item Análisis de los PDUs involucrados y la conversión de direcciones MAC.
+\end{itemize}
+
+% Sección de Conclusiones
+\section{Conclusiones}
+Aquí se sintetizan los resultados obtenidos y se discuten las ventajas y desventajas de la autoconfiguración en IPv6, así como el impacto del proceso de Neighbor Discovery en el rendimiento de la red.
+
+% Sección de Referencias
+\section{Referencias}
+\begin{itemize}
+  \item \textbf{Video 1:} “IPv6 SLAAC and EUI-64 Basics in Packet Tracer”, Dan Alberghetti, 2019.
+  \item \textbf{Video 2:} “IPv6 NDP and ICMPv6 using Packet Tracer”, Dan Alberghetti, 2020.
+  \item \textbf{Video 3:} “Detección de vecinos IPv6 (Packet Tracer Lab 9.3.4)”, RedesNetw channel, 2022.
+\end{itemize}
+
+\end{document}
