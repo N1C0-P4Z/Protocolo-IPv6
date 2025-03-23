@@ -3,13 +3,15 @@
 \usepackage[T1]{fontenc}         % Buena salida de fuentes
 \usepackage[spanish]{babel}      % Traducción de elementos automáticos al español
 \usepackage{lmodern}             % Fuente mejorada
-\usepackage{hyperref}            % Para enlaces
+\usepackage[hidelinks]{hyperref} % Para enlaces, [hidelinks] elimina el reborde azul del .pdf
 \usepackage{graphicx}            % Para incluir imágenes (PNG)
+\usepackage{float}               % Para anclar las imagenes a una posicion fija
+\usepackage{graphicx-external}
 \usepackage{bytefield}           % Para dibujar diagramas PDU
 \usepackage{geometry}            % Para ajustar márgenes
 \geometry{left=2.5cm, right=2.5cm, top=3cm, bottom=3cm}
 
-\title{Reporte de Laboratorio: IPv6 en Packet Tracer}
+\title{El protocolo IPv6}
 \author{Martín Moloeznik, Nicolás Paz Reyes\\[0.5em]
 Grupo: Integrantes del grupo (si aplica)\\[0.5em]
 Repositorio: \url{https://github.com/tu_usuario/tu_repositorio}}
@@ -21,7 +23,7 @@ Repositorio: \url{https://github.com/tu_usuario/tu_repositorio}}
 \begin{titlepage}
   \centering
   \vspace*{2cm}
-  {\Large \textbf{Reporte de Laboratorio: IPv6 en Packet Tracer}}\\[1.5cm]
+  {\large \textbf{El protocolo IPv6}}\\[1.5cm]
   
   {\large Integrantes:}\\
    \bigskip
@@ -40,25 +42,32 @@ Repositorio: \url{https://github.com/tu_usuario/tu_repositorio}}
 
 % Sección de Introducción
 \section{Introducción}
-En este documento se detallan los escenarios configurados en Packet Tracer para la práctica de IPv6. Se explica la configuración de las direcciones, el uso de SLAAC, el funcionamiento del Neighbor Discovery Protocol (NDP) y otros conceptos relevantes.
+El protocolo IPv6 fue desarrollado para reemplazar a IPv4 debido a la necesidad de una mayor cantidad de direcciones IP en el mundo. Dentro de IPv6 existen mecanismos esenciales para la configuración de direcciones y la comunicación entre dispositivos, entre los cuales se destacan SLAAC, EUI-64 y el protocolo Neighbor Discovery (NDP).
 
 % Sección 1: Escenarios y Configuraciones
-\section{Escenario 1: Configuración de IPv6 y SLAAC}
-\subsection{Configuración del Router}
+\section{IPv6 SLAAC and EUI-64 Basics}
+\subsection{Configuración del Router en IPv6}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7]{https://github.com/N1C0-P4Z/Protocolo-IPv6/blob/main/image_2025-03-23_110324419.png}
+  \caption{Figura 1:Red a ensayar}
+  \label{fig:github-imagen}
+\end{figure}
+
 Aquí se detalla la configuración necesaria en el router, incluyendo la activación de IPv6, asignación de direcciones LLA y GUA, y otros comandos.
 
 \subsection{Observación de PDUs y Diagramas}
 Utilizando el paquete \texttt{bytefield} se pueden dibujar diagramas de los campos de los mensajes ICMPv6, por ejemplo: \\
 
 \begin{bytefield}[boxformatting={\centering\itshape},bitwidth = 1.1em]{32}
-  \begin{rightwordgroup}{Algoritmo \\ EUI-64}
-    \bitbox{16}{48 bit MAC} & \bitbox{16}{00-E0-F9-98-8A-07}\\
-    \bitbox{16}{Separa al medio} & \bitbox{16}{00-E0-F9 \hspace{0.45cm} | \hspace{0.45cm} 98-8A-07}\\
-    \bitbox{16}{Insertar FF-FE} & \bitbox{16}{00-E0-F9 \textbf{FF-FE} 98-8A-07}\\
-    \bitbox{16}{Primeros dos hexa a binario} & \bitbox{16}{0000-0000-E0-F9  \textbf{FF-FE} 98-8A-07}\\
-    \bitbox{16}{Se invierte el septimo bit} & \bitbox{16}{0000-00\textbf{1}0-E0-F9  \textbf{FF-FE} 98-8A-07}\\
-    \bitbox{16}{64 bits host interface ID} & \bitbox{16}{\textbf{02}-E0-F9-\textbf{FF-FE}-98-8A-07}\\
-    \bitbox{16}{Link Local Address} & \bitbox{16}{FE80::\textbf{2E0:F9FF:FE98:8A07}}
+  \begin{rightwordgroup}{Header}
+    \bitbox{16}{48 bit mac} & \bitbox{16}{00-E0-F9-98-8A-07}\\
+    \bitbox{16}{separar medio} & \bitbox{16}{00-E0-F9 \hspace{1.2cm} 98-8A-07}\\
+    \bitbox{16}{insertar FF-FE} & \bitbox{16}{00-E0-F9 FF-FE 98-8A-07}\\
+    \bitbox{16}{ primeros 2 hexa} & \bitbox{16}{0000-0000-E0-F9   FF-FE   98-8A-07}\\
+    \bitbox{16}{48 bit mac} & \bitbox{16}{00-E0-F9-98-8A-07}\\
+    \bitbox{16}{48 bit mac} & \bitbox{16}{00-E0-F9-98-8A-07}\\
+    \bitbox{16}{48 bit mac} & \bitbox{16}{00-E0-F9-98-8A-07}
 
   \end{rightwordgroup}
 \end{bytefield}
@@ -92,10 +101,13 @@ Aquí se sintetizan los resultados obtenidos y se discuten las ventajas y desven
 
 % Sección de Referencias
 \section{Referencias}
+Para la elaboracion de este informe utilizamos el contenido de los siguientes videos. 
 \begin{itemize}
-  \item \textbf{Video 1:} “IPv6 SLAAC and EUI-64 Basics in Packet Tracer”, Dan Alberghetti, 2019.
-  \item \textbf{Video 2:} “IPv6 NDP and ICMPv6 using Packet Tracer”, Dan Alberghetti, 2020.
-  \item \textbf{Video 3:} “Detección de vecinos IPv6 (Packet Tracer Lab 9.3.4)”, RedesNetw channel, 2022.
+  \item \textbf{Video 1:} “IPv6 SLAAC and EUI-64 Basics in Packet Tracer”, Dan Alberghetti, 2019, at \url{https:
+  //www.youtube.com/watch?v=yMK1NVHksDE}.
+  \item \textbf{Video 2:} “IPv6 NDP and ICMPv6 using Packet Tracer”, Dan Alberghetti, 2020, at \url{https://www.
+  youtube.com/watch?v=y2GpG9aOIFI}
+  \item \textbf{Video 3:} “Detección de vecinos IPv6 (Packet Tracer Lab 9.3.4)”, RedesNetw channel, 2022, at \url{https://www.youtube.com/watch?v=ZBVXbgF39gw}
 \end{itemize}
 
 \end{document}
