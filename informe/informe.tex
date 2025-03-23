@@ -55,29 +55,33 @@ El protocolo IPv6 fue desarrollado para reemplazar a IPv4 debido a la necesidad 
 
 Aquí se detalla la configuración necesaria en el router, incluyendo la activación de IPv6, asignación de direcciones LLA y GUA, y otros comandos.
 
-\subsection{Observación de PDUs y Diagramas}
-Utilizando el paquete \texttt{bytefield} se pueden dibujar diagramas de los campos de los mensajes ICMPv6, por ejemplo: \\
-
+\subsection{Explicacion algoritmo EUI-64}
+   La pc se autoconfigura su Link Local Addres siguiendo los pasos a continuacion:
+\bigskip
++
 \begin{bytefield}[boxformatting={\centering\itshape},bitwidth = 1.1em]{32}
-  \begin{rightwordgroup}{Header}
-    \bitbox{16}{48 bit mac} & \bitbox{16}{00-E0-F9-98-8A-07}\\
-    \bitbox{16}{separar medio} & \bitbox{16}{00-E0-F9 \hspace{1.2cm} 98-8A-07}\\
-    \bitbox{16}{insertar FF-FE} & \bitbox{16}{00-E0-F9 FF-FE 98-8A-07}\\
-    \bitbox{16}{ primeros 2 hexa} & \bitbox{16}{0000-0000-E0-F9   FF-FE   98-8A-07}\\
-    \bitbox{16}{48 bit mac} & \bitbox{16}{00-E0-F9-98-8A-07}\\
-    \bitbox{16}{48 bit mac} & \bitbox{16}{00-E0-F9-98-8A-07}\\
-    \bitbox{16}{48 bit mac} & \bitbox{16}{00-E0-F9-98-8A-07}
+  \begin{rightwordgroup}{Algoritmo \\ EUI-64}
 
+    \bitbox{16}{48 bit MAC} & \bitbox{16}{00-E0-F9-98-8A-07}\\
+    \bitbox{16}{Separa al medio} & \bitbox{16}{00-E0-F9 \hspace{0.45cm} | \hspace{0.45cm} 98-8A-07}\\
+    \bitbox{16}{Insertar FF-FE} & \bitbox{16}{00-E0-F9 \textbf{FF-FE} 98-8A-07}\\
+    \bitbox{16}{Primeros dos hexa a binario} & \bitbox{16}{0000-0000-E0-F9  \textbf{FF-FE} 98-8A-07}\\
+    \bitbox{16}{Se invierte el septimo bit} & \bitbox{16}{0000-00\textbf{1}0-E0-F9  \textbf{FF-FE} 98-8A-07}\\
+    \bitbox{16}{64 bits host interface ID} & \bitbox{16}{\textbf{02}-E0-F9-\textbf{FF-FE}-98-8A-07}\\
+    \bitbox{16}{Link Local Address} & \bitbox{16}{FE80::\textbf{2E0:F9FF:FE98:8A07}}
   \end{rightwordgroup}
 \end{bytefield}
 
 \bigskip
 \begin{bytefield}[boxformatting={\centering\itshape},bitwidth = 1.1em]{32}
   \bitheader{0,4,12,32} \\
-  \begin{rightwordgroup}{Header}
   \bitbox{4}{Ver:6} & \bitbox{8}{TRFC} & \bitbox{20}{FLOW LABEL}\\
   \bitbox{16}{PL:12} & \bitbox{8}{NEXT:0x3a} & \bitbox{8}{HOP LIMIT:255}\\ 
-  \bitbox{32}{SRC IP:FE80::2E0:F9FF:FE98:8A07}
+  \begin{rightwordgroup}{Link Local\\ Address}
+    \wordbox{2}{SRC IP:FE80::2E0:F9FF:FE98:8A07}
+  \end{rightwordgroup}\\
+  \begin{rightwordgroup}{All Routers\\ Multicast \\address}
+    \wordbox{2}{DEST IP:FF02::2}
   \end{rightwordgroup}
 \end{bytefield}
 

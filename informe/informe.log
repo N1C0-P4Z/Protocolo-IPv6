@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2025.3.21)  23 MAR 2025 12:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2025.3.21)  23 MAR 2025 12:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -411,11 +411,6 @@ File: imagenes/lab1.png Graphic file (type png)
 <use imagenes/lab1.png>
 Package pdftex.def Info: imagenes/lab1.png  used on input line 51.
 (pdftex.def)             Requested size: 318.66948pt x 97.22504pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--60
-
- []
-
 \width=\dimen160
 \height=\dimen161
 \depth=\dimen162
@@ -477,8 +472,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--60
 \curly@shift=\dimen274
 \total@box@width=\dimen275
 
-Overfull \hbox (30.04008pt too wide) in paragraph at lines 72--73
-[][] 
+Overfull \hbox (28.08261pt too wide) in paragraph at lines 59--74
+[] 
  []
 
 \width=\dimen276
@@ -513,8 +508,16 @@ Overfull \hbox (30.04008pt too wide) in paragraph at lines 72--73
 \half@curly@height=\dimen305
 \curly@shift=\dimen306
 \total@box@width=\dimen307
+\width=\dimen308
+\height=\dimen309
+\depth=\dimen310
+\totalheight=\dimen311
+\curly@height=\dimen312
+\half@curly@height=\dimen313
+\curly@shift=\dimen314
+\total@box@width=\dimen315
 
-Overfull \hbox (30.04008pt too wide) in paragraph at lines 82--83
+Overfull \hbox (53.11371pt too wide) in paragraph at lines 86--87
 [][] 
  []
 
@@ -522,27 +525,27 @@ Overfull \hbox (30.04008pt too wide) in paragraph at lines 82--83
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.88   \item C
-              onfiguración de las interfaces en el router y dispositivos.{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc} <./imagenes/lab1.png>] [3] (./informe.aux
+l.89 \section
+             {Escenario 2: Neighbor Discovery y NDP}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc} <./imagenes/lab1.png>] [3] (./informe.aux
 LaTeX Info: Redefining \. on input line 22.
 LaTeX Info: Redefining \% on input line 22.
 )
 Package rerunfilecheck Info: File `informe.out' has not changed.
-(rerunfilecheck)             Checksum: E66C4194DF951B1279A8E00AD5C7F841;1204.
+(rerunfilecheck)             Checksum: 80237F5776B5FDED49E8E19076672008;1180.
  ) 
 Here is how much of TeX's memory you used:
- 10800 strings out of 476041
- 172623 string characters out of 5793174
- 1870388 words of memory out of 6000000
- 31085 multiletter control sequences out of 15000+600000
- 561847 words of font info for 64 fonts, out of 8000000 for 9000
+ 10802 strings out of 476041
+ 172648 string characters out of 5793174
+ 1867388 words of memory out of 6000000
+ 31086 multiletter control sequences out of 15000+600000
+ 566118 words of font info for 65 fonts, out of 8000000 for 9000
  1137 hyphenation exceptions out of 8191
- 75i,11n,76p,412b,501s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on informe.pdf (4 pages, 144293 bytes).
+ 75i,12n,76p,412b,486s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
+Output written on informe.pdf (4 pages, 160250 bytes).
 PDF statistics:
- 102 PDF objects out of 1000 (max. 8388607)
- 82 compressed objects within 1 object stream
+ 107 PDF objects out of 1000 (max. 8388607)
+ 85 compressed objects within 1 object stream
  13 named destinations out of 1000 (max. 500000)
  62 words of extra memory for PDF output out of 10000 (max. 10000000)
 
