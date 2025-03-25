@@ -1,0 +1,49 @@
+\documentclass{article}
+\usepackage{bytefield}
+
+\begin{document}
+
+\section*{IPv6 Packet}
+\begin{bytefield}[boxformatting={\centering\itshape},bitwidth = 1.1em]{32}
+  \bitheader{0,8,16} \\
+  \bitbox{4}{VER:6} & \bitbox{8}{TRFC} & \bitbox{20}{FLOW LABEL} \\
+  \bitbox{16}{PL:60} & \bitbox{8}{NEXT:0x3a} & \bitbox{8}{HOP LIMIT:255} \\
+  \wordbox{2}{SRC IP: FE80::1} \\
+  \wordbox{2}{DST IP: FF02::1}
+\end{bytefield}
+
+\section*{MTU Option}
+\begin{bytefield}[boxformatting={\centering\itshape},bitwidth = 1.1em]{32}
+  \bitheader{0,8,16} \\
+  \bitbox{8}{TYPE: 0x05} & \bitbox{8}{LNGTH: 0x01} & \bitbox{16}{RESERVED1} \\
+  \wordbox{2}{MTU: 1500}
+\end{bytefield}
+
+\section*{Prefix Option}
+\begin{bytefield}[boxformatting={\centering\itshape},bitwidth = 1.1em]{32}
+  \bitheader{0,8,16} \\
+  \bitbox{8}{TYPE: 0x03} & \bitbox{8}{LENGTH: 0x04} & \bitbox{8}{PREFIX LEN: 64} & \bitbox{8}{RESERVED1} \\
+  \bitbox{32}{VALID LIFETIME: 2592000} \\
+  \bitbox{32}{PREFERRED LIFETIME: 604800} \\
+  \bitbox{32}{RESERVED2} \\
+  \bitbox{32}{PREFIX: 2001:DB8:ACAD:1::}
+\end{bytefield}
+
+\section*{Router Advertisement Message}
+\begin{bytefield}[boxformatting={\centering\itshape},bitwidth = 1.1em]{32}
+  \bitheader{0,8,16} \\
+  \bitbox{8}{TYPE: 0x86} & \bitbox{8}{CODE: 0x00} & \bitbox{16}{CHECKSUM: 0x0000} \\
+  \bitbox{8}{Hop Limit: 0x40} & \bitbox{8}{RESERVED} & \bitbox{16}{Router Lifetime: 0x0708} \\
+  \bitbox{32}{Reachable Time: 0x00000000} \\
+  \bitbox{32}{Retrans Timer: 0x00000000}
+\end{bytefield}
+
+\section*{Link Layer Option}
+\begin{bytefield}[boxformatting={\centering\itshape},bitwidth = 1.1em]{32}
+  \bitheader{0,8,16} \\
+  \bitbox{8}{TYPE: 0x01} & \bitbox{8}{LENGTH: 0x01} & \bitbox{16}{} \\
+  \wordbox{2}{LINK LAYER ADDRESS: 0060.3E5A.5801}
+\end{bytefield}
+
+
+\end{document}
