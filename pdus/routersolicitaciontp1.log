@@ -1,0 +1,265 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.3.21)  25 MAR 2025 19:29
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**/home/nicolas/Escritorio/IPv6/pdus/routersolicitaciontp1.tex
+(/home/nicolas/Escritorio/IPv6/pdus/routersolicitaciontp1.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count187
+\c@section=\count188
+\c@subsection=\count189
+\c@subsubsection=\count190
+\c@paragraph=\count191
+\c@subparagraph=\count192
+\c@figure=\count193
+\c@table=\count194
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+) (/usr/share/texlive/texmf-dist/tex/latex/bytefield/bytefield.sty
+Package: bytefield 2023/09/24 v2.8 Network protocol diagrams
+ (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count195
+\calc@Bcount=\count196
+\calc@Adimen=\dimen141
+\calc@Bdimen=\dimen142
+\calc@Askip=\skip50
+\calc@Bskip=\skip51
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count197
+\calc@Cskip=\skip52
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+\bytefield@height=\skip53
+\bytefield@height@increment=\skip54
+\entire@bytefield@picture=\box51
+\bf@bitwidth=\skip55
+\bf@bitheight=\skip56
+\units@wide=\skip57
+\units@tall=\skip58
+\units@high=\skip59
+\header@xpos=\skip60
+\c@header@val=\count198
+\c@max@header@val=\count199
+\curly@box=\box52
+\wordlabelr@start=\skip61
+\wordlabelr@end=\skip62
+\wordlabell@start=\skip63
+\wordlabell@end=\skip64
+\total@lbox@width=\skip65
+\label@box@width=\skip66
+\label@box@height=\skip67
+\word@label@box=\box53
+) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count266
+\l__pdf_internal_box=\box54
+) (./routersolicitaciontp1.aux)
+\openout1 = `routersolicitaciontp1.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+\width=\dimen143
+\height=\dimen144
+\depth=\dimen145
+\totalheight=\dimen146
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 9.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 9.
+\width=\dimen147
+\height=\dimen148
+\depth=\dimen149
+\totalheight=\dimen150
+\width=\dimen151
+\height=\dimen152
+\depth=\dimen153
+\totalheight=\dimen154
+\width=\dimen155
+\height=\dimen156
+\depth=\dimen157
+\totalheight=\dimen158
+\width=\dimen159
+\height=\dimen160
+\depth=\dimen161
+\totalheight=\dimen162
+\width=\dimen163
+\height=\dimen164
+\depth=\dimen165
+\totalheight=\dimen166
+\width=\dimen167
+\height=\dimen168
+\depth=\dimen169
+\totalheight=\dimen170
+\width=\dimen171
+\height=\dimen172
+\depth=\dimen173
+\totalheight=\dimen174
+
+Overfull \hbox (7.00244pt too wide) in paragraph at lines 13--14
+[] 
+ []
+
+\width=\dimen175
+\height=\dimen176
+\depth=\dimen177
+\totalheight=\dimen178
+\width=\dimen179
+\height=\dimen180
+\depth=\dimen181
+\totalheight=\dimen182
+\width=\dimen183
+\height=\dimen184
+\depth=\dimen185
+\totalheight=\dimen186
+\width=\dimen187
+\height=\dimen188
+\depth=\dimen189
+\totalheight=\dimen190
+
+Overfull \hbox (7.00244pt too wide) in paragraph at lines 20--21
+[] 
+ []
+
+\width=\dimen191
+\height=\dimen192
+\depth=\dimen193
+\totalheight=\dimen194
+\width=\dimen195
+\height=\dimen196
+\depth=\dimen197
+\totalheight=\dimen198
+\width=\dimen199
+\height=\dimen256
+\depth=\dimen257
+\totalheight=\dimen258
+\width=\dimen259
+\height=\dimen260
+\depth=\dimen261
+\totalheight=\dimen262
+\width=\dimen263
+\height=\dimen264
+\depth=\dimen265
+\totalheight=\dimen266
+\width=\dimen267
+\height=\dimen268
+\depth=\dimen269
+\totalheight=\dimen270
+\width=\dimen271
+\height=\dimen272
+\depth=\dimen273
+\totalheight=\dimen274
+\width=\dimen275
+\height=\dimen276
+\depth=\dimen277
+\totalheight=\dimen278
+
+Overfull \hbox (7.00244pt too wide) in paragraph at lines 30--31
+[] 
+ []
+
+\width=\dimen279
+\height=\dimen280
+\depth=\dimen281
+\totalheight=\dimen282
+\width=\dimen283
+\height=\dimen284
+\depth=\dimen285
+\totalheight=\dimen286
+\width=\dimen287
+\height=\dimen288
+\depth=\dimen289
+\totalheight=\dimen290
+\width=\dimen291
+\height=\dimen292
+\depth=\dimen293
+\totalheight=\dimen294
+\width=\dimen295
+\height=\dimen296
+\depth=\dimen297
+\totalheight=\dimen298
+\width=\dimen299
+\height=\dimen300
+\depth=\dimen301
+\totalheight=\dimen302
+\width=\dimen303
+\height=\dimen304
+\depth=\dimen305
+\totalheight=\dimen306
+\width=\dimen307
+\height=\dimen308
+\depth=\dimen309
+\totalheight=\dimen310
+
+Overfull \hbox (7.00244pt too wide) in paragraph at lines 39--40
+[] 
+ []
+
+\width=\dimen311
+\height=\dimen312
+\depth=\dimen313
+\totalheight=\dimen314
+\width=\dimen315
+\height=\dimen316
+\depth=\dimen317
+\totalheight=\dimen318
+\width=\dimen319
+\height=\dimen320
+\depth=\dimen321
+\totalheight=\dimen322
+\width=\dimen323
+\height=\dimen324
+\depth=\dimen325
+\totalheight=\dimen326
+
+Overfull \hbox (7.00244pt too wide) in paragraph at lines 46--47
+[] 
+ []
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] (./routersolicitaciontp1.aux)
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 777 strings out of 474222
+ 14371 string characters out of 5748733
+ 1945975 words of memory out of 5000000
+ 23096 multiletter control sequences out of 15000+600000
+ 559020 words of font info for 39 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 42i,11n,51p,204b,322s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on routersolicitaciontp1.pdf (2 pages, 54681 bytes).
+PDF statistics:
+ 31 PDF objects out of 1000 (max. 8388607)
+ 18 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
