@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.3.21)  23 MAR 2025 13:24
-=======
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2025.3.21)  23 MAR 2025 12:50
->>>>>>> 7a7a76ba3c0c219e5ec3e4aaff4ba80b0db6e7c1
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.3.21)  25 MAR 2025 20:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -415,14 +411,16 @@ File: imagenes/lab1.png Graphic file (type png)
 <use imagenes/lab1.png>
 Package pdftex.def Info: imagenes/lab1.png  used on input line 50.
 (pdftex.def)             Requested size: 318.66948pt x 97.22504pt.
-<<<<<<< HEAD
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--59
+Underfull \hbox (badness 10000) in paragraph at lines 55--56
 
  []
 
-=======
->>>>>>> 7a7a76ba3c0c219e5ec3e4aaff4ba80b0db6e7c1
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--65
+
+ []
+
 \width=\dimen160
 \height=\dimen161
 \depth=\dimen162
@@ -484,13 +482,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 58--59
 \curly@shift=\dimen274
 \total@box@width=\dimen275
 
-<<<<<<< HEAD
-Overfull \hbox (30.04008pt too wide) in paragraph at lines 71--72
+Overfull \hbox (45.70743pt too wide) in paragraph at lines 81--82
 [][] 
-=======
-Overfull \hbox (28.08261pt too wide) in paragraph at lines 59--74
-[] 
->>>>>>> 7a7a76ba3c0c219e5ec3e4aaff4ba80b0db6e7c1
+ []
+
+[2
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.84 ...tino es la ALL routers multicast address.}
+                                                   <./imagenes/lab1.png>]
+Overfull \hbox (13.14893pt too wide) in paragraph at lines 84--86
+[]\T1/lmtt/m/n/12 Luego entramos al modo simulación y cambiamos la configuración ipv6 de la
+ []
+
+
+Overfull \hbox (14.05612pt too wide) in paragraph at lines 84--86
+\T1/lmtt/m/n/12 pc de static a auto-config, inmediatamente, la pc envía un mensaje de router
+ []
+
+
+Overfull \hbox (7.88112pt too wide) in paragraph at lines 84--86
+\T1/lmtt/m/n/12 solicitation. Donde la ip de origen es la LLA de la pc que se autoconfiguró
  []
 
 \width=\dimen276
@@ -534,29 +547,146 @@ Overfull \hbox (28.08261pt too wide) in paragraph at lines 59--74
 \curly@shift=\dimen314
 \total@box@width=\dimen315
 
-<<<<<<< HEAD
-Overfull \hbox (30.04008pt too wide) in paragraph at lines 81--82
-=======
-Overfull \hbox (53.11371pt too wide) in paragraph at lines 86--87
->>>>>>> 7a7a76ba3c0c219e5ec3e4aaff4ba80b0db6e7c1
+Overfull \hbox (53.11371pt too wide) in paragraph at lines 97--98
 [][] 
  []
 
-[2
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-<<<<<<< HEAD
-l.87   \item C
-              onfiguraciÃ³n de las interfaces en el router y dispositivos.{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc} <./imagenes/lab1.png>] [3] (./informe.aux
+
+Overfull \hbox (19.32393pt too wide) in paragraph at lines 99--100
+[]\T1/lmtt/m/n/12 La PC aprende que se esta usando IPv6 y a la LLA del router que usará como
+ []
+
+\width=\dimen316
+\height=\dimen317
+\depth=\dimen318
+\totalheight=\dimen319
+\width=\dimen320
+\height=\dimen321
+\depth=\dimen322
+\totalheight=\dimen323
+\width=\dimen324
+\height=\dimen325
+\depth=\dimen326
+\totalheight=\dimen327
+\width=\dimen328
+\height=\dimen329
+\depth=\dimen330
+\totalheight=\dimen331
+\width=\dimen332
+\height=\dimen333
+\depth=\dimen334
+\totalheight=\dimen335
+\width=\dimen336
+\height=\dimen337
+\depth=\dimen338
+\totalheight=\dimen339
+\width=\dimen340
+\height=\dimen341
+\depth=\dimen342
+\totalheight=\dimen343
+\width=\dimen344
+\height=\dimen345
+\depth=\dimen346
+\totalheight=\dimen347
+\width=\dimen348
+\height=\dimen349
+\depth=\dimen350
+\totalheight=\dimen351
+\width=\dimen352
+\height=\dimen353
+\depth=\dimen354
+\totalheight=\dimen355
+\width=\dimen356
+\height=\dimen357
+\depth=\dimen358
+\totalheight=\dimen359
+\width=\dimen360
+\height=\dimen361
+\depth=\dimen362
+\totalheight=\dimen363
+\width=\dimen364
+\height=\dimen365
+\depth=\dimen366
+\totalheight=\dimen367
+\width=\dimen368
+\height=\dimen369
+\depth=\dimen370
+\totalheight=\dimen371
+\width=\dimen372
+\height=\dimen373
+\depth=\dimen374
+\totalheight=\dimen375
+\width=\dimen376
+\height=\dimen377
+\depth=\dimen378
+\totalheight=\dimen379
+[3{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}]
+\width=\dimen380
+\height=\dimen381
+\depth=\dimen382
+\totalheight=\dimen383
+\width=\dimen384
+\height=\dimen385
+\depth=\dimen386
+\totalheight=\dimen387
+\width=\dimen388
+\height=\dimen389
+\depth=\dimen390
+\totalheight=\dimen391
+\width=\dimen392
+\height=\dimen393
+\depth=\dimen394
+\totalheight=\dimen395
+\width=\dimen396
+\height=\dimen397
+\depth=\dimen398
+\totalheight=\dimen399
+\width=\dimen400
+\height=\dimen401
+\depth=\dimen402
+\totalheight=\dimen403
+\width=\dimen404
+\height=\dimen405
+\depth=\dimen406
+\totalheight=\dimen407
+\width=\dimen408
+\height=\dimen409
+\depth=\dimen410
+\totalheight=\dimen411
+
+Overfull \hbox (31.68094pt too wide) in paragraph at lines 131--132
+[]\T1/lmtt/m/n/12 Aquí la PC aprende el prefijo de red, su tamaño, el tipo y por cuanto tiempo
+ []
+
+
+Overfull \hbox (38.74913pt too wide) in paragraph at lines 131--132
+\T1/lmtt/m/n/12 es valida esta informacion. De esta forma, la PC se autoconfigura su IPv6 Global
+ []
+
+
+Overfull \hbox (14.05612pt too wide) in paragraph at lines 131--132
+\T1/lmtt/m/n/12 Unicast Address, porque que tiene todos los elementos necesarios. Usará como
+ []
+
+\width=\dimen412
+\height=\dimen413
+\depth=\dimen414
+\totalheight=\dimen415
+\width=\dimen416
+\height=\dimen417
+\depth=\dimen418
+\totalheight=\dimen419
+\width=\dimen420
+\height=\dimen421
+\depth=\dimen422
+\totalheight=\dimen423
+\width=\dimen424
+\height=\dimen425
+\depth=\dimen426
+\totalheight=\dimen427
+[4] [5] (./informe.aux
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
-=======
-l.89 \section
-             {Escenario 2: Neighbor Discovery y NDP}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc} <./imagenes/lab1.png>] [3] (./informe.aux
-LaTeX Info: Redefining \. on input line 22.
-LaTeX Info: Redefining \% on input line 22.
->>>>>>> 7a7a76ba3c0c219e5ec3e4aaff4ba80b0db6e7c1
 )
  ***********
 LaTeX2e <2023-11-01> patch level 1
@@ -566,30 +696,18 @@ Package rerunfilecheck Info: File `informe.out' has not changed.
 (rerunfilecheck)             Checksum: 80237F5776B5FDED49E8E19076672008;1180.
  ) 
 Here is how much of TeX's memory you used:
-<<<<<<< HEAD
- 11053 strings out of 474222
- 173656 string characters out of 5748733
- 1943975 words of memory out of 5000000
- 33148 multiletter control sequences out of 15000+600000
- 607629 words of font info for 68 fonts, out of 8000000 for 9000
+ 11061 strings out of 474222
+ 173733 string characters out of 5748733
+ 1952975 words of memory out of 5000000
+ 33149 multiletter control sequences out of 15000+600000
+ 611900 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,11n,79p,409b,506s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on informe.pdf (4 pages, 144287 bytes).
-=======
- 10802 strings out of 476041
- 172648 string characters out of 5793174
- 1867388 words of memory out of 6000000
- 31086 multiletter control sequences out of 15000+600000
- 566118 words of font info for 65 fonts, out of 8000000 for 9000
- 1137 hyphenation exceptions out of 8191
- 75i,12n,76p,412b,486s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on informe.pdf (4 pages, 160250 bytes).
->>>>>>> 7a7a76ba3c0c219e5ec3e4aaff4ba80b0db6e7c1
+ 75i,11n,79p,412b,493s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbxi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
+Output written on informe.pdf (6 pages, 172773 bytes).
 PDF statistics:
- 107 PDF objects out of 1000 (max. 8388607)
- 85 compressed objects within 1 object stream
- 13 named destinations out of 1000 (max. 500000)
+ 120 PDF objects out of 1000 (max. 8388607)
+ 96 compressed objects within 1 object stream
+ 19 named destinations out of 1000 (max. 500000)
  62 words of extra memory for PDF output out of 10000 (max. 10000000)
 

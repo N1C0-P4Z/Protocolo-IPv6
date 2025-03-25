@@ -52,12 +52,21 @@ El protocolo IPv6 fue desarrollado para reemplazar a IPv4 debido a la necesidad 
   \label{fig:lab1}
 \end{figure}
 
-Aquí se detalla la configuración necesaria en el router, incluyendo la activación de IPv6, asignación de direcciones LLA y GUA, y otros comandos.
+Mediante los siguientes comandos configuramos la Link Local Address del router a fe80::1 y la GUA a 2001:db8:acad:1::1/64.\\
+
+\noindent Router\#enable\\
+Router\#configure terminal\\
+Router(config)\#ipv6 unicast-routing\\
+Router(config)\#interface g0/0\\
+Router(config-if)\#ipv6 enable\\
+Router(config-if)\#ipv6 address fe80::1 link-local\\
+Router(config-if)\#ipv6 address 2001:db8:acad:1::1/64\\
+Router(config-if)\#no shutdown\\
 
 \subsection{Explicacion algoritmo EUI-64}
    La pc se autoconfigura su Link Local Addres siguiendo los pasos a continuacion:
+
 \bigskip
-+
 \begin{bytefield}[boxformatting={\centering\itshape},bitwidth = 1.1em]{32}
   \begin{rightwordgroup}{Algoritmo \\ EUI-64}
 
@@ -72,6 +81,9 @@ Aquí se detalla la configuración necesaria en el router, incluyendo la activac
 \end{bytefield}
 
 \bigskip
+\texttt{Luego entramos al modo simulación y cambiamos la configuración ipv6 de la pc de static a  auto-config, inmediatamente, la pc envía un mensaje de router solicitation. Donde la ip de origen es la LLA de la pc que se autoconfiguró mediante EUI-64 y la ip destino es la ALL routers multicast address.}
+\bigskip
+
 \begin{bytefield}[boxformatting={\centering\itshape},bitwidth = 1.1em]{32}
   \bitheader{0,4,12,32} \\
   \bitbox{4}{Ver:6} & \bitbox{8}{TRFC} & \bitbox{20}{FLOW LABEL}\\
@@ -83,6 +95,49 @@ Aquí se detalla la configuración necesaria en el router, incluyendo la activac
     \wordbox{2}{DEST IP:FF02::2}
   \end{rightwordgroup}
 \end{bytefield}
+
+\texttt{La PC aprende que se esta usando IPv6 y a la LLA del router que usará como gateway.}
+
+\section*{IPv6 Packet}
+\begin{bytefield}[boxformatting={\centering\itshape},bitwidth = 1.1em]{32}
+  \bitheader{0,8,16} \\
+  \bitbox{4}{VER:6} & \bitbox{8}{TRFC} & \bitbox{20}{FLOW LABEL} \\
+  \bitbox{16}{PL:60} & \bitbox{8}{NEXT:0x3a} & \bitbox{8}{HOP LIMIT:255} \\
+  \wordbox{2}{SRC IP: FE80::1} \\
+  \wordbox{2}{DST IP: FF02::1}
+\end{bytefield}
+
+\texttt{El router responde con el siguiente mensaje de Router Advertisement:}
+
+\section*{Router Advertisement Message}
+\begin{bytefield}[boxformatting={\centering\itshape},bitwidth = 1.1em]{32}
+  \bitheader{0,8,16} \\
+  \bitbox{8}{TYPE: 0x86} & \bitbox{8}{CODE: 0x00} & \bitbox{16}{CHECKSUM: 0x0000} \\
+  \bitbox{8}{Hop Limit: 0x40} & \bitbox{8}{RESERVED} & \bitbox{16}{Router Lifetime: 0x0708} \\
+  \bitbox{32}{Reachable Time: 0x00000000} \\
+  \bitbox{32}{Retrans Timer: 0x00000000}
+\end{bytefield}
+
+\section*{Prefix Option}
+\begin{bytefield}[boxformatting={\centering\itshape},bitwidth = 1.1em]{32}
+  \bitheader{0,8,16} \\
+  \bitbox{8}{TYPE: 0x03} & \bitbox{8}{LENGTH: 0x04} & \bitbox{8}{PREFIX LEN: 64} & \bitbox{8}{RESERVED1} \\
+  \bitbox{32}{VALID LIFETIME: 2592000} \\
+  \bitbox{32}{PREFERRED LIFETIME: 604800} \\
+  \bitbox{32}{RESERVED2} \\
+  \bitbox{32}{PREFIX: 2001:DB8:ACAD:1::}
+\end{bytefield}
+
+\texttt{Aquí la PC aprende el prefijo de red, su tamaño, el tipo y por cuanto tiempo es valida esta informacion. De esta forma, la PC se autoconfigura su IPv6 Global Unicast Address, porque que tiene todos los elementos necesarios. Usará como interface ID lo que ya aprendio usando el algoritmo EUI-64}
+
+\section*{Link Layer Option}
+\begin{bytefield}[boxformatting={\centering\itshape},bitwidth = 1.1em]{32}
+  \bitheader{0,8,16} \\
+  \bitbox{8}{TYPE: 0x01} & \bitbox{8}{LENGTH: 0x01} & \bitbox{16}{} \\
+  \wordbox{2}{LINK LAYER ADDRESS: 0060.3E5A.5801}
+\end{bytefield}
+
+\texttt{En este mensaje, la PC aprende la Link Layer Address del Router.}
 
 % Sección 2: Escenario 2: Neighbor Discovery
 \section{Escenario 2: Neighbor Discovery y NDP}
