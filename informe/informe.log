@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.3.21)  25 MAR 2025 20:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.3.21)  25 MAR 2025 20:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -406,7 +406,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
                    \relax 
 l.39 \newpage
               [1]
-<imagenes/lab1.png, id=52, 473.77pt x 144.54pt>
+<imagenes/lab1.png, id=62, 473.77pt x 144.54pt>
 File: imagenes/lab1.png Graphic file (type png)
 <use imagenes/lab1.png>
 Package pdftex.def Info: imagenes/lab1.png  used on input line 50.
@@ -490,22 +490,8 @@ Overfull \hbox (45.70743pt too wide) in paragraph at lines 81--82
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.84 ...tino es la ALL routers multicast address.}
-                                                   <./imagenes/lab1.png>]
-Overfull \hbox (13.14893pt too wide) in paragraph at lines 84--86
-[]\T1/lmtt/m/n/12 Luego entramos al modo simulación y cambiamos la configuración ipv6 de la
- []
-
-
-Overfull \hbox (14.05612pt too wide) in paragraph at lines 84--86
-\T1/lmtt/m/n/12 pc de static a auto-config, inmediatamente, la pc envía un mensaje de router
- []
-
-
-Overfull \hbox (7.88112pt too wide) in paragraph at lines 84--86
-\T1/lmtt/m/n/12 solicitation. Donde la ip de origen es la LLA de la pc que se autoconfiguró
- []
-
+l.82 \section
+             {Router Solicitation} <./imagenes/lab1.png>]
 \width=\dimen276
 \height=\dimen277
 \depth=\dimen278
@@ -547,13 +533,8 @@ Overfull \hbox (7.88112pt too wide) in paragraph at lines 84--86
 \curly@shift=\dimen314
 \total@box@width=\dimen315
 
-Overfull \hbox (53.11371pt too wide) in paragraph at lines 97--98
+Overfull \hbox (53.11371pt too wide) in paragraph at lines 98--99
 [][] 
- []
-
-
-Overfull \hbox (19.32393pt too wide) in paragraph at lines 99--100
-[]\T1/lmtt/m/n/12 La PC aprende que se esta usando IPv6 y a la LLA del router que usará como
  []
 
 \width=\dimen316
@@ -653,21 +634,6 @@ Overfull \hbox (19.32393pt too wide) in paragraph at lines 99--100
 \height=\dimen409
 \depth=\dimen410
 \totalheight=\dimen411
-
-Overfull \hbox (31.68094pt too wide) in paragraph at lines 131--132
-[]\T1/lmtt/m/n/12 Aquí la PC aprende el prefijo de red, su tamaño, el tipo y por cuanto tiempo
- []
-
-
-Overfull \hbox (38.74913pt too wide) in paragraph at lines 131--132
-\T1/lmtt/m/n/12 es valida esta informacion. De esta forma, la PC se autoconfigura su IPv6 Global
- []
-
-
-Overfull \hbox (14.05612pt too wide) in paragraph at lines 131--132
-\T1/lmtt/m/n/12 Unicast Address, porque que tiene todos los elementos necesarios. Usará como
- []
-
 \width=\dimen412
 \height=\dimen413
 \depth=\dimen414
@@ -684,7 +650,7 @@ Overfull \hbox (14.05612pt too wide) in paragraph at lines 131--132
 \height=\dimen425
 \depth=\dimen426
 \totalheight=\dimen427
-[4] [5] (./informe.aux
+ [4] [5] (./informe.aux
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
 )
@@ -693,21 +659,21 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `informe.out' has not changed.
-(rerunfilecheck)             Checksum: 80237F5776B5FDED49E8E19076672008;1180.
+(rerunfilecheck)             Checksum: 861E7391A1D95259C619D3DDE41F0DF4;1467.
  ) 
 Here is how much of TeX's memory you used:
- 11061 strings out of 474222
- 173733 string characters out of 5748733
+ 11063 strings out of 474222
+ 173753 string characters out of 5748733
  1952975 words of memory out of 5000000
- 33149 multiletter control sequences out of 15000+600000
+ 33151 multiletter control sequences out of 15000+600000
  611900 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,11n,79p,412b,493s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,11n,79p,409b,493s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbxi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on informe.pdf (6 pages, 172773 bytes).
+Output written on informe.pdf (6 pages, 171181 bytes).
 PDF statistics:
- 120 PDF objects out of 1000 (max. 8388607)
- 96 compressed objects within 1 object stream
+ 129 PDF objects out of 1000 (max. 8388607)
+ 104 compressed objects within 2 object streams
  19 named destinations out of 1000 (max. 500000)
- 62 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 78 words of extra memory for PDF output out of 10000 (max. 10000000)
 

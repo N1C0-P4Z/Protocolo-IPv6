@@ -3,6 +3,8 @@
 \contentsline {section}{\numberline {2}IPv6 SLAAC and EUI-64 Basics}{2}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Configuración del Router en IPv6}{2}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Explicacion algoritmo EUI-64}{2}{subsection.2.2}%
-\contentsline {section}{\numberline {3}Escenario 2: Neighbor Discovery y NDP}{4}{section.3}%
-\contentsline {section}{\numberline {4}Conclusiones}{5}{section.4}%
-\contentsline {section}{\numberline {5}Referencias}{5}{section.5}%
+\contentsline {section}{\numberline {3}Router Solicitation}{3}{section.3}%
+\contentsline {section}{\numberline {4}Router Advertisement}{3}{section.4}%
+\contentsline {section}{\numberline {5}Escenario 2: Neighbor Discovery y NDP}{4}{section.5}%
+\contentsline {section}{\numberline {6}Conclusiones}{5}{section.6}%
+\contentsline {section}{\numberline {7}Referencias}{5}{section.7}%

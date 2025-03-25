@@ -190,9 +190,9 @@ INPUT ./imagenes/lab1.png
 INPUT ./imagenes/lab1.png
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmri12.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmbxi10.tfm
-INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmtt12.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmr6.tfm
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc
+INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmtt12.tfm
 INPUT informe.aux
 INPUT ./informe.out
 INPUT ./informe.out
