@@ -45,5 +45,26 @@
   \wordbox{2}{LINK LAYER ADDRESS: 0060.3E5A.5801}
 \end{bytefield}
 
+\section*{ICMPv6 Neighbor Solicitation Message}
+\begin{bytefield}[boxformatting={\centering\itshape},bitwidth = 1.1em]{32}
+  \bitheader{0,8,16} \\
+  \bitbox{8}{TYPE: 0x87} & \bitbox{8}{CODE: 0x00} & \bitbox{16}{CHECKSUM} \\
+  \bitbox{1}{R} & \bitbox{1}{S} & \bitbox{1}{O} & \bitbox{29}{Reserved} \\
+  \bitbox{32}{Target Address: 2001:DB8:ACAD:1::B}
+\end{bytefield}
 
+\section*{ICMPv6 Neighbor Advertisement Message}
+\begin{bytefield}[boxformatting={\centering\itshape},bitwidth = 1.1em]{32}
+  \bitheader{0,8,16} \\
+  \bitbox{8}{TYPE: 0x88} & \bitbox{8}{CODE: 0x00} & \bitbox{16}{CHECKSUM} \\
+  \bitbox{1}{R} & \bitbox{1}{S} & \bitbox{1}{O} & \bitbox{29}{Reserved} \\
+  \bitbox{32}{Target Address: 2001:DB8:ACAD:1::B}
+\end{bytefield}
+
+\section*{ICMPv6 Echo Message}
+\begin{bytefield}{32}
+  \bitheader{0,8,16} \\
+  \bitbox{8}{TYPE: 0x80} & \bitbox{8}{CODE: 0x00} & \bitbox{16}{CHECKSUM: 0x0000} \\
+  \bitbox{16}{IDENTIFIER: 2} & \bitbox{16}{SEQUENCE NUMBER: 1}
+\end{bytefield}
 \end{document}
