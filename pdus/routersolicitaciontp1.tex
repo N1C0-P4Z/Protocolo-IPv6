@@ -1,5 +1,6 @@
 \documentclass{article}
 \usepackage{bytefield}
+\usepackage{array}
 
 \begin{document}
 
@@ -62,9 +63,43 @@
 \end{bytefield}
 
 \section*{ICMPv6 Echo Message}
-\begin{bytefield}{32}
+\begin{bytefield}[boxformatting={\centering\itshape},bitwidth = 1.1em]{32}
   \bitheader{0,8,16} \\
   \bitbox{8}{TYPE: 0x80} & \bitbox{8}{CODE: 0x00} & \bitbox{16}{CHECKSUM: 0x0000} \\
   \bitbox{16}{IDENTIFIER: 2} & \bitbox{16}{SEQUENCE NUMBER: 1}
 \end{bytefield}
+
+
+\section*{ICMPv6 Echo Message 2}
+\begin{bytefield}[boxformatting={\centering\itshape},bitwidth = 1.1em]{32}
+  \bitheader{0,8,16} \\
+  \bitbox{8}{TYPE: 0x81} & \bitbox{8}{CODE: 0x00} & \bitbox{16}{CHECKSUM: 0x0000} \\
+  \bitbox{16}{IDENTIFIER: 2} & \bitbox{16}{SEQUENCE NUMBER: 1}
+\end{bytefield}
+
+\section*{R0\#show ipv6 eighbors}
+\begin{bytefield}[boxformatting={\centering\itshape},bitwidth = 1.1em]{32}
+  \bitheader{0,8,16} \\
+  \bitbox{16}{IPv6 Address} & \bitbox{4}{Age} & \bitbox{8}{Link-layer Addr} & \bitbox{4}{State} & \bitbox{4}{Interface} \\
+  \bitbox{16}{2001:DB8:ACAD:1::A} & \bitbox{4}{0} & \bitbox{8}{0090.2B89.2D86} & \bitbox{4}{REACH} & \bitbox{4}{Gig0/0} \\
+  \bitbox{16}{2001:DB8:ACAD:2::A} & \bitbox{4}{0} & \bitbox{8}{000A.41E4.42D4} & \bitbox{4}{REACH} & \bitbox{4}{Gig0/1} \\
+  \bitbox{16}{FE80::20A:41FF:FEE4:42D4 } & \bitbox{4}{0} & \bitbox{8}{000A.41E4.42D4} & \bitbox{4}{REACH} & \bitbox{4}{Gig0/1} \\
+  \bitbox{16}{FE80::290:2BFF:FE89:2D86} & \bitbox{4}{0} & \bitbox{8}{0090.2B89.2D86} & \bitbox{4}{REACH} & \bitbox{4}{Gig0/0} \\
+
+
+\end{bytefield}
+\section{R0\# show ipv6 neighbors 2}
+\begin{bytefield}[boxformatting={\centering\itshape},bitwidth = 1.1em]{32}
+  \bitheader{0,8,16} \\
+  \bitbox{16}{IPv6 Address} & \bitbox{4}{Age} & \bitbox{8}{Link-layer Addr} & \bitbox{4}{State} & \bitbox{4}{Interface} \\
+  \bitbox{16}{2001:DB8:ACAD:1::A} & \bitbox{4}{28} & \bitbox{8}{0090.2B89.2D86} & \bitbox{4}{REACH} & \bitbox{4}{Gig0/0} \\
+  \bitbox{16}{2001:DB8:ACAD:2::B} & \bitbox{4}{0} & \bitbox{8}{000A.41E4.42D4} & \bitbox{4}{REACH} & \bitbox{4}{Gig0/1} \\
+  \bitbox{16}{2001:DB8:ACAD:2::A} & \bitbox{4}{28} & \bitbox{8}{000A.41E4.42D4} & \bitbox{4}{REACH} & \bitbox{4}{Gig0/1} \\
+  \bitbox{16}{FE80::20A:41FF:FEE4:42D4 } & \bitbox{4}{28} & \bitbox{8}{000A.41E4.42D4} & \bitbox{4}{REACH} & \bitbox{4}{Gig0/1} \\
+  \bitbox{16}{FE80::290:2BFF:FE89:2D86} & \bitbox{4}{28} & \bitbox{8}{0090.2B89.2D86} & \bitbox{4}{REACH} & \bitbox{4}{Gig0/0} \\
+
+
+\end{bytefield}
+
+
 \end{document}

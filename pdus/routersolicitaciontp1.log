@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2025.3.21)  26 MAR 2025 15:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2025.3.21)  26 MAR 2025 19:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -60,295 +60,565 @@ Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \label@box@width=\skip66
 \label@box@height=\skip67
 \word@label@box=\box53
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen143
+\ar@mcellbox=\box54
+\extrarowheight=\dimen144
+\NC@list=\toks17
+\extratabsurround=\skip68
+\backup@length=\skip69
+\ar@cellbox=\box55
 ) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count198
-\l__pdf_internal_box=\box54
+\l__pdf_internal_box=\box56
 ) (./routersolicitaciontp1.aux)
 \openout1 = `routersolicitaciontp1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-\width=\dimen143
-\height=\dimen144
-\depth=\dimen145
-\totalheight=\dimen146
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+\width=\dimen145
+\height=\dimen146
+\depth=\dimen147
+\totalheight=\dimen148
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 9.
+(Font)              <7> on input line 10.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 9.
-\width=\dimen147
-\height=\dimen148
-\depth=\dimen149
-\totalheight=\dimen150
-\width=\dimen151
-\height=\dimen152
-\depth=\dimen153
-\totalheight=\dimen154
-\width=\dimen155
-\height=\dimen156
-\depth=\dimen157
-\totalheight=\dimen158
-\width=\dimen159
-\height=\dimen160
-\depth=\dimen161
-\totalheight=\dimen162
-\width=\dimen163
-\height=\dimen164
-\depth=\dimen165
-\totalheight=\dimen166
-\width=\dimen167
-\height=\dimen168
-\depth=\dimen169
-\totalheight=\dimen170
-\width=\dimen171
-\height=\dimen172
-\depth=\dimen173
-\totalheight=\dimen174
+(Font)              <5> on input line 10.
+\width=\dimen149
+\height=\dimen150
+\depth=\dimen151
+\totalheight=\dimen152
+\width=\dimen153
+\height=\dimen154
+\depth=\dimen155
+\totalheight=\dimen156
+\width=\dimen157
+\height=\dimen158
+\depth=\dimen159
+\totalheight=\dimen160
+\width=\dimen161
+\height=\dimen162
+\depth=\dimen163
+\totalheight=\dimen164
+\width=\dimen165
+\height=\dimen166
+\depth=\dimen167
+\totalheight=\dimen168
+\width=\dimen169
+\height=\dimen170
+\depth=\dimen171
+\totalheight=\dimen172
+\width=\dimen173
+\height=\dimen174
+\depth=\dimen175
+\totalheight=\dimen176
 
-Overfull \hbox (7.00244pt too wide) in paragraph at lines 13--14
+Overfull \hbox (7.00244pt too wide) in paragraph at lines 14--15
 [] 
  []
 
-\width=\dimen175
-\height=\dimen176
-\depth=\dimen177
-\totalheight=\dimen178
-\width=\dimen179
-\height=\dimen180
-\depth=\dimen181
-\totalheight=\dimen182
-\width=\dimen183
-\height=\dimen184
-\depth=\dimen185
-\totalheight=\dimen186
-\width=\dimen187
-\height=\dimen188
-\depth=\dimen189
-\totalheight=\dimen190
+\width=\dimen177
+\height=\dimen178
+\depth=\dimen179
+\totalheight=\dimen180
+\width=\dimen181
+\height=\dimen182
+\depth=\dimen183
+\totalheight=\dimen184
+\width=\dimen185
+\height=\dimen186
+\depth=\dimen187
+\totalheight=\dimen188
+\width=\dimen189
+\height=\dimen190
+\depth=\dimen191
+\totalheight=\dimen192
 
-Overfull \hbox (7.00244pt too wide) in paragraph at lines 20--21
+Overfull \hbox (7.00244pt too wide) in paragraph at lines 21--22
 [] 
  []
 
-\width=\dimen191
-\height=\dimen192
-\depth=\dimen193
-\totalheight=\dimen194
-\width=\dimen195
-\height=\dimen196
-\depth=\dimen197
-\totalheight=\dimen198
-\width=\dimen199
-\height=\dimen256
-\depth=\dimen257
-\totalheight=\dimen258
-\width=\dimen259
-\height=\dimen260
-\depth=\dimen261
-\totalheight=\dimen262
-\width=\dimen263
-\height=\dimen264
-\depth=\dimen265
-\totalheight=\dimen266
-\width=\dimen267
-\height=\dimen268
-\depth=\dimen269
-\totalheight=\dimen270
-\width=\dimen271
-\height=\dimen272
-\depth=\dimen273
-\totalheight=\dimen274
-\width=\dimen275
-\height=\dimen276
-\depth=\dimen277
-\totalheight=\dimen278
+\width=\dimen193
+\height=\dimen194
+\depth=\dimen195
+\totalheight=\dimen196
+\width=\dimen197
+\height=\dimen198
+\depth=\dimen199
+\totalheight=\dimen256
+\width=\dimen257
+\height=\dimen258
+\depth=\dimen259
+\totalheight=\dimen260
+\width=\dimen261
+\height=\dimen262
+\depth=\dimen263
+\totalheight=\dimen264
+\width=\dimen265
+\height=\dimen266
+\depth=\dimen267
+\totalheight=\dimen268
+\width=\dimen269
+\height=\dimen270
+\depth=\dimen271
+\totalheight=\dimen272
+\width=\dimen273
+\height=\dimen274
+\depth=\dimen275
+\totalheight=\dimen276
+\width=\dimen277
+\height=\dimen278
+\depth=\dimen279
+\totalheight=\dimen280
 
-Overfull \hbox (7.00244pt too wide) in paragraph at lines 30--31
+Overfull \hbox (7.00244pt too wide) in paragraph at lines 31--32
 [] 
  []
 
-\width=\dimen279
-\height=\dimen280
-\depth=\dimen281
-\totalheight=\dimen282
-\width=\dimen283
-\height=\dimen284
-\depth=\dimen285
-\totalheight=\dimen286
-\width=\dimen287
-\height=\dimen288
-\depth=\dimen289
-\totalheight=\dimen290
-\width=\dimen291
-\height=\dimen292
-\depth=\dimen293
-\totalheight=\dimen294
-\width=\dimen295
-\height=\dimen296
-\depth=\dimen297
-\totalheight=\dimen298
-\width=\dimen299
-\height=\dimen300
-\depth=\dimen301
-\totalheight=\dimen302
-\width=\dimen303
-\height=\dimen304
-\depth=\dimen305
-\totalheight=\dimen306
-\width=\dimen307
-\height=\dimen308
-\depth=\dimen309
-\totalheight=\dimen310
+\width=\dimen281
+\height=\dimen282
+\depth=\dimen283
+\totalheight=\dimen284
+\width=\dimen285
+\height=\dimen286
+\depth=\dimen287
+\totalheight=\dimen288
+\width=\dimen289
+\height=\dimen290
+\depth=\dimen291
+\totalheight=\dimen292
+\width=\dimen293
+\height=\dimen294
+\depth=\dimen295
+\totalheight=\dimen296
+\width=\dimen297
+\height=\dimen298
+\depth=\dimen299
+\totalheight=\dimen300
+\width=\dimen301
+\height=\dimen302
+\depth=\dimen303
+\totalheight=\dimen304
+\width=\dimen305
+\height=\dimen306
+\depth=\dimen307
+\totalheight=\dimen308
+\width=\dimen309
+\height=\dimen310
+\depth=\dimen311
+\totalheight=\dimen312
 
-Overfull \hbox (7.00244pt too wide) in paragraph at lines 39--40
+Overfull \hbox (7.00244pt too wide) in paragraph at lines 40--41
 [] 
  []
 
-\width=\dimen311
-\height=\dimen312
-\depth=\dimen313
-\totalheight=\dimen314
-\width=\dimen315
-\height=\dimen316
-\depth=\dimen317
-\totalheight=\dimen318
-\width=\dimen319
-\height=\dimen320
-\depth=\dimen321
-\totalheight=\dimen322
-\width=\dimen323
-\height=\dimen324
-\depth=\dimen325
-\totalheight=\dimen326
+\width=\dimen313
+\height=\dimen314
+\depth=\dimen315
+\totalheight=\dimen316
+\width=\dimen317
+\height=\dimen318
+\depth=\dimen319
+\totalheight=\dimen320
+\width=\dimen321
+\height=\dimen322
+\depth=\dimen323
+\totalheight=\dimen324
+\width=\dimen325
+\height=\dimen326
+\depth=\dimen327
+\totalheight=\dimen328
 
-Overfull \hbox (7.00244pt too wide) in paragraph at lines 46--47
+Overfull \hbox (7.00244pt too wide) in paragraph at lines 47--48
 [] 
  []
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-\width=\dimen327
-\height=\dimen328
-\depth=\dimen329
-\totalheight=\dimen330
-\width=\dimen331
-\height=\dimen332
-\depth=\dimen333
-\totalheight=\dimen334
-\width=\dimen335
-\height=\dimen336
-\depth=\dimen337
-\totalheight=\dimen338
-\width=\dimen339
-\height=\dimen340
-\depth=\dimen341
-\totalheight=\dimen342
-\width=\dimen343
-\height=\dimen344
-\depth=\dimen345
-\totalheight=\dimen346
-\width=\dimen347
-\height=\dimen348
-\depth=\dimen349
-\totalheight=\dimen350
-\width=\dimen351
-\height=\dimen352
-\depth=\dimen353
-\totalheight=\dimen354
-\width=\dimen355
-\height=\dimen356
-\depth=\dimen357
-\totalheight=\dimen358
+\width=\dimen329
+\height=\dimen330
+\depth=\dimen331
+\totalheight=\dimen332
+\width=\dimen333
+\height=\dimen334
+\depth=\dimen335
+\totalheight=\dimen336
+\width=\dimen337
+\height=\dimen338
+\depth=\dimen339
+\totalheight=\dimen340
+\width=\dimen341
+\height=\dimen342
+\depth=\dimen343
+\totalheight=\dimen344
+\width=\dimen345
+\height=\dimen346
+\depth=\dimen347
+\totalheight=\dimen348
+\width=\dimen349
+\height=\dimen350
+\depth=\dimen351
+\totalheight=\dimen352
+\width=\dimen353
+\height=\dimen354
+\depth=\dimen355
+\totalheight=\dimen356
+\width=\dimen357
+\height=\dimen358
+\depth=\dimen359
+\totalheight=\dimen360
 
-Overfull \hbox (7.00244pt too wide) in paragraph at lines 54--55
+Overfull \hbox (7.00244pt too wide) in paragraph at lines 55--56
 [] 
  []
 
-\width=\dimen359
-\height=\dimen360
-\depth=\dimen361
-\totalheight=\dimen362
-\width=\dimen363
-\height=\dimen364
-\depth=\dimen365
-\totalheight=\dimen366
-\width=\dimen367
-\height=\dimen368
-\depth=\dimen369
-\totalheight=\dimen370
-\width=\dimen371
-\height=\dimen372
-\depth=\dimen373
-\totalheight=\dimen374
-\width=\dimen375
-\height=\dimen376
-\depth=\dimen377
-\totalheight=\dimen378
-\width=\dimen379
-\height=\dimen380
-\depth=\dimen381
-\totalheight=\dimen382
-\width=\dimen383
-\height=\dimen384
-\depth=\dimen385
-\totalheight=\dimen386
-\width=\dimen387
-\height=\dimen388
-\depth=\dimen389
-\totalheight=\dimen390
+\width=\dimen361
+\height=\dimen362
+\depth=\dimen363
+\totalheight=\dimen364
+\width=\dimen365
+\height=\dimen366
+\depth=\dimen367
+\totalheight=\dimen368
+\width=\dimen369
+\height=\dimen370
+\depth=\dimen371
+\totalheight=\dimen372
+\width=\dimen373
+\height=\dimen374
+\depth=\dimen375
+\totalheight=\dimen376
+\width=\dimen377
+\height=\dimen378
+\depth=\dimen379
+\totalheight=\dimen380
+\width=\dimen381
+\height=\dimen382
+\depth=\dimen383
+\totalheight=\dimen384
+\width=\dimen385
+\height=\dimen386
+\depth=\dimen387
+\totalheight=\dimen388
+\width=\dimen389
+\height=\dimen390
+\depth=\dimen391
+\totalheight=\dimen392
 
-Overfull \hbox (7.00244pt too wide) in paragraph at lines 62--63
+Overfull \hbox (7.00244pt too wide) in paragraph at lines 63--64
 [] 
  []
 
-\width=\dimen391
-\height=\dimen392
-\depth=\dimen393
-\totalheight=\dimen394
-\width=\dimen395
-\height=\dimen396
-\depth=\dimen397
-\totalheight=\dimen398
-\width=\dimen399
-\height=\dimen400
-\depth=\dimen401
-\totalheight=\dimen402
-\width=\dimen403
-\height=\dimen404
-\depth=\dimen405
-\totalheight=\dimen406
-\width=\dimen407
-\height=\dimen408
-\depth=\dimen409
-\totalheight=\dimen410
-[2] (./routersolicitaciontp1.aux) ) 
+\width=\dimen393
+\height=\dimen394
+\depth=\dimen395
+\totalheight=\dimen396
+\width=\dimen397
+\height=\dimen398
+\depth=\dimen399
+\totalheight=\dimen400
+\width=\dimen401
+\height=\dimen402
+\depth=\dimen403
+\totalheight=\dimen404
+\width=\dimen405
+\height=\dimen406
+\depth=\dimen407
+\totalheight=\dimen408
+\width=\dimen409
+\height=\dimen410
+\depth=\dimen411
+\totalheight=\dimen412
+
+Overfull \hbox (7.00244pt too wide) in paragraph at lines 70--71
+[] 
+ []
+
+\width=\dimen413
+\height=\dimen414
+\depth=\dimen415
+\totalheight=\dimen416
+\width=\dimen417
+\height=\dimen418
+\depth=\dimen419
+\totalheight=\dimen420
+\width=\dimen421
+\height=\dimen422
+\depth=\dimen423
+\totalheight=\dimen424
+\width=\dimen425
+\height=\dimen426
+\depth=\dimen427
+\totalheight=\dimen428
+\width=\dimen429
+\height=\dimen430
+\depth=\dimen431
+\totalheight=\dimen432
+
+Overfull \hbox (7.00244pt too wide) in paragraph at lines 78--79
+[] 
+ []
+
+\width=\dimen433
+\height=\dimen434
+\depth=\dimen435
+\totalheight=\dimen436
+\width=\dimen437
+\height=\dimen438
+\depth=\dimen439
+\totalheight=\dimen440
+\width=\dimen441
+\height=\dimen442
+\depth=\dimen443
+\totalheight=\dimen444
+\width=\dimen445
+\height=\dimen446
+\depth=\dimen447
+\totalheight=\dimen448
+\width=\dimen449
+\height=\dimen450
+\depth=\dimen451
+\totalheight=\dimen452
+\width=\dimen453
+\height=\dimen454
+\depth=\dimen455
+\totalheight=\dimen456
+\width=\dimen457
+\height=\dimen458
+\depth=\dimen459
+\totalheight=\dimen460
+\width=\dimen461
+\height=\dimen462
+\depth=\dimen463
+\totalheight=\dimen464
+\width=\dimen465
+\height=\dimen466
+\depth=\dimen467
+\totalheight=\dimen468
+\width=\dimen469
+\height=\dimen470
+\depth=\dimen471
+\totalheight=\dimen472
+\width=\dimen473
+\height=\dimen474
+\depth=\dimen475
+\totalheight=\dimen476
+\width=\dimen477
+\height=\dimen478
+\depth=\dimen479
+\totalheight=\dimen480
+\width=\dimen481
+\height=\dimen482
+\depth=\dimen483
+\totalheight=\dimen484
+\width=\dimen485
+\height=\dimen486
+\depth=\dimen487
+\totalheight=\dimen488
+\width=\dimen489
+\height=\dimen490
+\depth=\dimen491
+\totalheight=\dimen492
+\width=\dimen493
+\height=\dimen494
+\depth=\dimen495
+\totalheight=\dimen496
+\width=\dimen497
+\height=\dimen498
+\depth=\dimen499
+\totalheight=\dimen500
+\width=\dimen501
+\height=\dimen502
+\depth=\dimen503
+\totalheight=\dimen504
+\width=\dimen505
+\height=\dimen506
+\depth=\dimen507
+\totalheight=\dimen508
+\width=\dimen509
+\height=\dimen510
+\depth=\dimen511
+\totalheight=\dimen512
+\width=\dimen513
+\height=\dimen514
+\depth=\dimen515
+\totalheight=\dimen516
+\width=\dimen517
+\height=\dimen518
+\depth=\dimen519
+\totalheight=\dimen520
+\width=\dimen521
+\height=\dimen522
+\depth=\dimen523
+\totalheight=\dimen524
+\width=\dimen525
+\height=\dimen526
+\depth=\dimen527
+\totalheight=\dimen528
+\width=\dimen529
+\height=\dimen530
+\depth=\dimen531
+\totalheight=\dimen532
+
+Overfull \hbox (51.00275pt too wide) in paragraph at lines 97--98
+[] 
+ []
+
+[2]
+\width=\dimen533
+\height=\dimen534
+\depth=\dimen535
+\totalheight=\dimen536
+\width=\dimen537
+\height=\dimen538
+\depth=\dimen539
+\totalheight=\dimen540
+\width=\dimen541
+\height=\dimen542
+\depth=\dimen543
+\totalheight=\dimen544
+\width=\dimen545
+\height=\dimen546
+\depth=\dimen547
+\totalheight=\dimen548
+\width=\dimen549
+\height=\dimen550
+\depth=\dimen551
+\totalheight=\dimen552
+\width=\dimen553
+\height=\dimen554
+\depth=\dimen555
+\totalheight=\dimen556
+\width=\dimen557
+\height=\dimen558
+\depth=\dimen559
+\totalheight=\dimen560
+\width=\dimen561
+\height=\dimen562
+\depth=\dimen563
+\totalheight=\dimen564
+\width=\dimen565
+\height=\dimen566
+\depth=\dimen567
+\totalheight=\dimen568
+\width=\dimen569
+\height=\dimen570
+\depth=\dimen571
+\totalheight=\dimen572
+\width=\dimen573
+\height=\dimen574
+\depth=\dimen575
+\totalheight=\dimen576
+\width=\dimen577
+\height=\dimen578
+\depth=\dimen579
+\totalheight=\dimen580
+\width=\dimen581
+\height=\dimen582
+\depth=\dimen583
+\totalheight=\dimen584
+\width=\dimen585
+\height=\dimen586
+\depth=\dimen587
+\totalheight=\dimen588
+\width=\dimen589
+\height=\dimen590
+\depth=\dimen591
+\totalheight=\dimen592
+\width=\dimen593
+\height=\dimen594
+\depth=\dimen595
+\totalheight=\dimen596
+\width=\dimen597
+\height=\dimen598
+\depth=\dimen599
+\totalheight=\dimen600
+\width=\dimen601
+\height=\dimen602
+\depth=\dimen603
+\totalheight=\dimen604
+\width=\dimen605
+\height=\dimen606
+\depth=\dimen607
+\totalheight=\dimen608
+\width=\dimen609
+\height=\dimen610
+\depth=\dimen611
+\totalheight=\dimen612
+\width=\dimen613
+\height=\dimen614
+\depth=\dimen615
+\totalheight=\dimen616
+\width=\dimen617
+\height=\dimen618
+\depth=\dimen619
+\totalheight=\dimen620
+\width=\dimen621
+\height=\dimen622
+\depth=\dimen623
+\totalheight=\dimen624
+\width=\dimen625
+\height=\dimen626
+\depth=\dimen627
+\totalheight=\dimen628
+\width=\dimen629
+\height=\dimen630
+\depth=\dimen631
+\totalheight=\dimen632
+\width=\dimen633
+\height=\dimen634
+\depth=\dimen635
+\totalheight=\dimen636
+\width=\dimen637
+\height=\dimen638
+\depth=\dimen639
+\totalheight=\dimen640
+\width=\dimen641
+\height=\dimen642
+\depth=\dimen643
+\totalheight=\dimen644
+\width=\dimen645
+\height=\dimen646
+\depth=\dimen647
+\totalheight=\dimen648
+\width=\dimen649
+\height=\dimen650
+\depth=\dimen651
+\totalheight=\dimen652
+
+Overfull \hbox (51.00275pt too wide) in paragraph at lines 109--110
+[] 
+ []
+
+[3] (./routersolicitaciontp1.aux) ) 
 Here is how much of TeX's memory you used:
- 778 strings out of 476041
- 14508 string characters out of 5793174
- 1872388 words of memory out of 6000000
- 21297 multiletter control sequences out of 15000+600000
+ 845 strings out of 476041
+ 15534 string characters out of 5793174
+ 1884388 words of memory out of 6000000
+ 21362 multiletter control sequences out of 15000+600000
  513238 words of font info for 35 fonts, out of 8000000 for 9000
  1137 hyphenation exceptions out of 8191
- 42i,11n,48p,207b,322s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 42i,11n,48p,230b,324s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on routersolicitaciontp1.pdf (2 pages, 63719 bytes).
+Output written on routersolicitaciontp1.pdf (3 pages, 61532 bytes).
 PDF statistics:
- 31 PDF objects out of 1000 (max. 8388607)
- 18 compressed objects within 1 object stream
+ 34 PDF objects out of 1000 (max. 8388607)
+ 20 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
