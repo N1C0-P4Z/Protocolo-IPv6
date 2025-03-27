@@ -24,7 +24,8 @@
 \contentsline {subsubsection}{\numberline {2.2.6}Primer evento ICMPv6 en R0}{9}{subsubsection.2.2.6}%
 \contentsline {subsubsection}{\numberline {2.2.7}Evento ICMPv6 en la PC2}{10}{subsubsection.2.2.7}%
 \contentsline {subsubsection}{\numberline {2.2.8}Ultimos eventos ICMPv6}{11}{subsubsection.2.2.8}%
-\contentsline {subsubsection}{\numberline {2.2.9}Modo Realtime}{13}{subsubsection.2.2.9}%
-\contentsline {subsubsection}{\numberline {2.2.10}Ping de R0 a la Pc1}{14}{subsubsection.2.2.10}%
-\contentsline {section}{\numberline {3}Conclusiones}{14}{section.3}%
-\contentsline {section}{\numberline {4}Referencias}{14}{section.4}%
+\contentsline {subsubsection}{\numberline {2.2.9}Reinicio de simulación}{11}{subsubsection.2.2.9}%
+\contentsline {subsubsection}{\numberline {2.2.10}Modo Realtime}{12}{subsubsection.2.2.10}%
+\contentsline {subsubsection}{\numberline {2.2.11}Ping de R0 a la Pc1}{13}{subsubsection.2.2.11}%
+\contentsline {section}{\numberline {3}Conclusiones}{13}{section.3}%
+\contentsline {section}{\numberline {4}Referencias}{13}{section.4}%
