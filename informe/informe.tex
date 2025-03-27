@@ -48,12 +48,13 @@ El protocolo IPv6 fue desarrollado para reemplazar a IPv4 debido a la necesidad 
 % Sección 1: Escenarios y Configuraciones
 \section{IPv6 SLAAC and EUI-64 Basics}
 \subsection{Configuración del Router en IPv6}
-
-
-%ACA VA UNA IMAGENNNN QUE NICO BORRO PARA NO GENERAL PROBLEMAS
-
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.7\textwidth]{imagenes/lab1.png}
+  \caption{Primer Escenario}
+\end{figure}
+\FloatBarrier
 Mediante los siguientes comandos configuramos la Link Local Address del router a fe80::1 y la GUA a 2001:db8:acad:1::1/64.\\
-
 \noindent Router\#enable\\
 Router\#configure terminal\\
 Router(config)\#ipv6 unicast-routing\\
@@ -151,8 +152,12 @@ En este mensaje, la PC aprende la Link Layer Address del Router.
 
 % Sección 2: Escenario 2: Neighbor Discovery
 \section{Neighbor Discovery}
-
-%ACA VA UNA FOTO DEL ESCENARIO
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.7\textwidth]{imagenes/lab2.png}
+  \caption{Segundo Escenario}
+\end{figure}
+\FloatBarrier
 
 Configuramos las IPs de las PCs y el Router con los comandos que vimos en el apartado anterior. Luego nos aseguramos que el R0 no tenga información de sus vecinos con
 \bigskip
@@ -205,8 +210,13 @@ De esta manera mostramos cómo funcionan los mensajes de Neighbor Solicitation y
 \subsubsection{Mensaje ICMPv6}
 
 En el primer evento, seleccionamos el mensaje ICMPv6 en la PC0, para analizar la PDU.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.7\textwidth]{imagenes/LD1.png}
+  \caption{Mensaje ICMPv6}
+\end{figure}
+\FloatBarrier
 
-%ACA VA UNA FOTOOOO seria el P2
 
 Observamos que es un mensaje ICMPv6 de TYPE 0x80, es decir 128 en decimal, lo que corresponde a un mensaje ECHO REQUEST, que cuenta con la siguiente estructura:
 
@@ -274,8 +284,12 @@ Al seleccionar el primer evento en el Router 0, en el que el router recibe el me
 Seleccionamos el próximo evento ICMPv6 de la PC0 y observamos que efectivamente tiene toda la información para comunicarse con la PC1.
 
 \bigskip
-
-%ACA VA UNA FOTOOOOOOOOO
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.7\textwidth]{imagenes/LD2.png}
+  \caption{Proximo Paquete ICMPv6}
+\end{figure}
+\FloatBarrier
 
 Efectivamente la PC0 tiene la dirección de IP destino y la dirección MAC de destino de la PC1, por lo que ahora la comunicación entre PCs debería ser exitosa.
 
@@ -292,27 +306,34 @@ En el último evento de la lista, que es un mensaje ICMPv6 de PC0, vemos que es 
 Reseteamos la simulación y volvemos a hacer un ping entre la PC0 y la PC1 mediante comandos, y observamos la ausencia del proceso Neighbor Discovery, ya que la PC0 ya conoce la MAC de la PC1 gracias al proceso realizado anteriormente.
 
 \bigskip
-
-%ACA VA UNA FOTOOOOOOOOOOOOOOOOOO
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.7\textwidth]{imagenes/LD3.png}
+  \caption{Luego de resetear simulacion}
+\end{figure}
+\FloatBarrier
 
 Con esta información, la PC0 puede hacer pings a la PC1 cuantas veces quiera. Por esto sólo observamos los eventos ICMPv6 que van del PC0 al Switch, del Switch a la PC1 y las respuestas correspondientes. 
 
 \bigskip
 
-
-
-
-%aca martoooooo!!!! no tocar que me te cojo.
 \subsection{Non Local Delivery}
 
 \subsubsection{Configuracion el escenario}
 Para analizar el proceso en redes remotas, primero borraremos la informacion sobre neighbors en el Router 0 mediante el comando clear ipv6 neighbors y reseteamos la información.\\
+
 \subsubsection{Comienzo del escenario}
 Realizaremos un ping desde la PC0 a la PC2 que tiene la IP 2001:DB8:ACAD:2: :A/64, en el modo simulación para poder ver y analizar la lista de eventos.\\
-\subsubsection{Primer Evento en PC0}
-Al observar el primer evento en la PC0, que se trata de un mensaje ICMPv6, vemos que no hay información en la capa 2, ya que la PC0 todavía no sabe la MAC address de la PC2.\\
 
-%BORRE UNA IMAGEN QUE SI VA 1.png es la imagen
+\subsubsection{Primer Evento en PC0}
+Al observar el primer evento en la PC0, que se trata de un mensaje ICMPv6, vemos que no hay información en la capa 2, ya que la PC0 todavía no sabe la MAC address de la PC2.\\ 
+\bigskip
+\begin{figure}[h]
+  \centering
+  \includegraphics[bb=0 0 400 300, width=0.7\textwidth]{imagenes/ayuda.png}
+  \caption{Primer Evento en Pc0}
+\end{figure}
+\FloatBarrier
 \subsubsection{Segundo Evento en la PC0}
 Al observar el primer mensaje NDP en la PC0, vemos que es un Neighbor Solicitation, ya que es de tipo 0x87(135 en decimal) al igual que anteriormente en el Local Delivery. La dirección IPv6 de origen es la Link Local Address de la PC0, la cual es FE80::290:2BFF:FE89:2D86.\\
 \begin{figure}[h]
@@ -370,7 +391,6 @@ Ingresamos al modo realtime ejecutamos el comando show ipv6 neighbors y vemos la
 
 \bigskip
 \begin{bytefield}[boxformatting={\centering\itshape},bitwidth = 1.1em]{32}
-  \bitheader{0,8,16} \\
   \bitbox{16}{IPv6 Address} & \bitbox{4}{Age} & \bitbox{8}{Link-layer Addr} & \bitbox{4}{State} & \bitbox{4}{Interface} \\
   \bitbox{16}{2001:DB8:ACAD:1::A} & \bitbox{4}{0} & \bitbox{8}{0090.2B89.2D86} & \bitbox{4}{REACH} & \bitbox{4}{Gig0/0} \\
   \bitbox{16}{2001:DB8:ACAD:2::A} & \bitbox{4}{0} & \bitbox{8}{000A.41E4.42D4} & \bitbox{4}{REACH} & \bitbox{4}{Gig0/1} \\
@@ -382,7 +402,6 @@ Aquí vemos 4 direcciones, 2 Global Unicast Address (GUA) y 2 Link - Local Addre
 Realizamos un ping a la PC1 desde el Router y volvemos a ejecutar el comando show ipv6 neighbors:\\
 
 \begin{bytefield}[boxformatting={\centering\itshape},bitwidth = 1.1em]{32}
-    \bitheader{0,8,16} \\
     \bitbox{16}{IPv6 Address} & \bitbox{4}{Age} & \bitbox{8}{Link-layer Addr} & \bitbox{4}{State} & \bitbox{4}{Interface} \\
     \bitbox{16}{2001:DB8:ACAD:1::A} & \bitbox{4}{28} & \bitbox{8}{0090.2B89.2D86} & \bitbox{4}{REACH} & \bitbox{4}{Gig0/0} \\
     \bitbox{16}{2001:DB8:ACAD:2::B} & \bitbox{4}{0} & \bitbox{8}{000A.41E4.42D4} & \bitbox{4}{REACH} & \bitbox{4}{Gig0/1} \\
