@@ -8,6 +8,7 @@
 \usepackage{float}               % Para anclar las imagenes a una posicion fija
 \usepackage{bytefield}           % Para dibujar diagramas PDU
 \usepackage{geometry}            % Para ajustar márgenes
+\usepackage{lmodern}
 \geometry{left=2.5cm, right=2.5cm, top=3cm, bottom=3cm}
 
 \title{El protocolo IPv6}
@@ -39,7 +40,8 @@ Repositorio: \url{https://github.com/tu_usuario/tu_repositorio}}
 \newpage
 
 % Sección de Introducción
-\section{Introducción}
+\section*{Introducción}
+\setcounter{section}{0}
 El protocolo IPv6 fue desarrollado para reemplazar a IPv4 debido a la necesidad de una mayor cantidad de direcciones IP en el mundo. Dentro de IPv6 existen mecanismos esenciales para la configuración de direcciones y la comunicación entre dispositivos, entre los cuales se destacan SLAAC, EUI-64 y el protocolo Neighbor Discovery (NDP).
 
 % Sección 1: Escenarios y Configuraciones
