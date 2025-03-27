@@ -20,12 +20,18 @@
 \contentsline {subsubsection}{\numberline {2.2.2}Comienzo del escenario}{7}{subsubsection.2.2.2}%
 \contentsline {subsubsection}{\numberline {2.2.3}Primer Evento en PC0}{7}{subsubsection.2.2.3}%
 \contentsline {subsubsection}{\numberline {2.2.4}Segundo Evento en la PC0}{7}{subsubsection.2.2.4}%
-\contentsline {subsubsection}{\numberline {2.2.5}Próximo Evento ICMPv6 en la PC0}{8}{subsubsection.2.2.5}%
+\contentsline {subsubsection}{\numberline {2.2.5}Próximo Evento ICMPv6 en la PC0}{7}{subsubsection.2.2.5}%
 \contentsline {subsubsection}{\numberline {2.2.6}Primer evento ICMPv6 en R0}{9}{subsubsection.2.2.6}%
-\contentsline {subsubsection}{\numberline {2.2.7}Evento ICMPv6 en la PC2}{10}{subsubsection.2.2.7}%
-\contentsline {subsubsection}{\numberline {2.2.8}Ultimos eventos ICMPv6}{11}{subsubsection.2.2.8}%
-\contentsline {subsubsection}{\numberline {2.2.9}Reinicio de simulación}{11}{subsubsection.2.2.9}%
-\contentsline {subsubsection}{\numberline {2.2.10}Modo Realtime}{12}{subsubsection.2.2.10}%
-\contentsline {subsubsection}{\numberline {2.2.11}Ping de R0 a la Pc1}{13}{subsubsection.2.2.11}%
-\contentsline {section}{\numberline {3}Conclusiones}{13}{section.3}%
-\contentsline {section}{\numberline {4}Referencias}{13}{section.4}%
+\contentsline {subsubsection}{\numberline {2.2.7}Evento ICMPv6 en la PC2}{9}{subsubsection.2.2.7}%
+\contentsline {subsubsection}{\numberline {2.2.8}Ultimos eventos ICMPv6}{10}{subsubsection.2.2.8}%
+\contentsline {subsubsection}{\numberline {2.2.9}Reinicio de simulación}{10}{subsubsection.2.2.9}%
+\contentsline {subsubsection}{\numberline {2.2.10}Modo Realtime}{11}{subsubsection.2.2.10}%
+\contentsline {subsubsection}{\numberline {2.2.11}Ping de R0 a la Pc1}{12}{subsubsection.2.2.11}%
+\contentsline {section}{\numberline {3}Conclusiones}{12}{section.3}%
+\contentsline {subsection}{\numberline {3.1}¿Qué ventajas y desventajas plantea la autoconfiguración de IPv6?}{12}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Qué tipos de mensajes se utilizan en la configuración vs el descubrimiento y cómo se relacionan?}{13}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}¿Cuando requiere un dispositivo el proceso de detección de vecinos IPv6? }{13}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}¿Cómo ayuda un router a minimizar la cantidad de tráfico IPv6 Neighbor Discovery en una red? }{13}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}¿Cómo minimiza IPv6 el impacto del proceso ND en los hosts de red? }{13}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}¿En qué difiere el proceso de detección de vecinos cuando un host de destino está en la misma LAN y cuando está en una LAN remota? }{14}{subsection.3.6}%
+\contentsline {section}{\numberline {4}Referencias}{14}{section.4}%

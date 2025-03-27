@@ -49,6 +49,7 @@ El protocolo IPv6 fue desarrollado para reemplazar a IPv4 debido a la necesidad 
 \section{IPv6 SLAAC and EUI-64 Basics}
 \subsection{Configuración del Router en IPv6}
 
+
 %ACA VA UNA IMAGENNNN QUE NICO BORRO PARA NO GENERAL PROBLEMAS
 
 Mediante los siguientes comandos configuramos la Link Local Address del router a fe80::1 y la GUA a 2001:db8:acad:1::1/64.\\
@@ -310,11 +311,8 @@ Para analizar el proceso en redes remotas, primero borraremos la informacion sob
 Realizaremos un ping desde la PC0 a la PC2 que tiene la IP 2001:DB8:ACAD:2: :A/64, en el modo simulación para poder ver y analizar la lista de eventos.\\
 \subsubsection{Primer Evento en PC0}
 Al observar el primer evento en la PC0, que se trata de un mensaje ICMPv6, vemos que no hay información en la capa 2, ya que la PC0 todavía no sabe la MAC address de la PC2.\\
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.7\textwidth]{imagenes/1.png}
-    \caption{Primer ICMPv6 Pc0}
-\end{figure}\\
+
+%BORRE UNA IMAGEN QUE SI VA 1.png es la imagen
 \subsubsection{Segundo Evento en la PC0}
 Al observar el primer mensaje NDP en la PC0, vemos que es un Neighbor Solicitation, ya que es de tipo 0x87(135 en decimal) al igual que anteriormente en el Local Delivery. La dirección IPv6 de origen es la Link Local Address de la PC0, la cual es FE80::290:2BFF:FE89:2D86.\\
 \begin{figure}[h]
@@ -395,7 +393,58 @@ Realizamos un ping a la PC1 desde el Router y volvemos a ejecutar el comando sho
 Vemos una nueva dirección correspondiente a la GUA de la PC1, ya que luego del ping hubo interacción con el router y este aprendió su dirección. IPv6.\\
 % Sección de Conclusiones
 \section{Conclusiones}
-Aquí se sintetizan los resultados obtenidos y se discuten las ventajas y desventajas de la autoconfiguración en IPv6, así como el impacto del proceso de Neighbor Discovery en el rendimiento de la red.
+\subsection{¿Qué ventajas y desventajas plantea la autoconfiguración de IPv6?}
+
+La autoconfiguración de IPv6 plantea las siguientes ventajas y desventajas:\\
+
+Ventajas:\\
+  \begin{itemize}
+    \item{\textbf{Simplicidad:} La autoconfiguración de IPv6 facilita la configuración de dispositivos en una red, eliminando la necesidad de intervención manual o servidores de configuración como DHCP.}
+    \item {\textbf{Escalabilidad:} Dado el gran espacio de direcciones de IPv6, cada dispositivo puede obtener una dirección única sin la necesidad de gestionar un servidor.}
+    \item{\textbf{Flexibilidad:} Los dispositivos pueden auto configurarse de manera autónoma y eficiente, especialmente en redes grandes o en entornos móviles.} 
+  \end{itemize}
+\bigskip
+
+Desventajas:\\
+  \begin{itemize}
+    \item {\textbf{Confusión en la administración de direcciones:} En algunos casos, la asignación automática de direcciones puede resultar en problemas de redundancia o en la falta de control sobre la asignación de direcciones IP.}
+    \item {\textbf{Complejidad en redes grandes:} Aunque la autoconfiguración es beneficiosa, puede resultar difícil de gestionar en redes de gran escala sin herramientas adicionales de monitoreo y control.}
+  \end{itemize}
+\bigskip
+\subsection{Qué tipos de mensajes se utilizan en la configuración vs el descubrimiento y cómo se relacionan?}
+
+
+Configuracion:\\
+  \begin{itemize}
+    \item {\textbf{Router Solicitation:} Enviado por dispositivos que se incorporan a la red para solicitar información de configuración a los routers locales.}
+    \item {\textbf{Router Advertisement:} Emitido periódicamente por los routers para informar a los dispositivos sobre parámetros de red, como prefijos de direcciones y la dirección de la puerta de enlace predeterminada.}
+  \end{itemize}
+
+\bigskip
+
+Descubrimiento:\\
+  \begin{itemize}
+    \item {\textbf{Neighbor Solicitation:} Utilizado por un dispositivo para determinar la dirección MAC correspondiente a una dirección IPv6 dentro de la misma red local, reemplazando la función del protocolo ARP en IPv4. }
+    \item {\textbf{Neighbor Advertisement:} Respuesta a una Solicitud de Vecino, proporcionando la dirección MAC asociada a la dirección IPv6 solicitada.}
+  \end{itemize}
+
+\subsection{¿Cuando requiere un dispositivo el proceso de detección de vecinos IPv6? }
+
+Un dispositivo requiere el proceso de detección de vecinos IPv6 cuando no se tiene conocimiento de la dirección MAC de destino en la red. Este proceso es similar al funcionamiento de ARP en redes IPv4.\\
+
+\subsection{¿Cómo ayuda un router a minimizar la cantidad de tráfico IPv6 Neighbor Discovery en una red? }
+
+Los routers en una red IPv6 ayudan a minimizar la cantidad de tráfico generado por el proceso de Neighbor Discovery manteniendo una tabla de vecinos. Esto permite evitar la repetición innecesaria de solicitudes de descubrimiento, ya que el router puede utilizar las entradas de la tabla para resolver direcciones MAC sin necesidad de volver a iniciar el proceso de detección en cada instancia.\\
+
+\subsection{¿Cómo minimiza IPv6 el impacto del proceso ND en los hosts de red? }
+
+IPv6 reduce el impacto del proceso de Neighbor Discovery en los hosts al utilizar mensajes de multicast. De este modo, sólo los dispositivos que están escuchando en las direcciones correspondientes reciben los mensajes, lo que limita la cantidad de tráfico innecesario.\\
+
+\subsection{¿En qué difiere el proceso de detección de vecinos cuando un host de destino está en la misma LAN y cuando está en una LAN remota? }
+
+El proceso de detección de vecinos varía en función de si el host de destino se encuentra en la misma LAN o en una LAN remota. En el caso de una LAN local, cuando un dispositivo envía una solicitud de Neighbor Discovery, el router encargado de recibir el paquete simplemente lo descarta si no es relevante para sus interfaces, mientras que el dispositivo de destino procesa el mensaje. 
+En cambio, en una LAN remota, el router proporcionará la dirección MAC asociada a la interfaz local para que sea utilizada como la dirección de destino, facilitando la comunicación a través de las diferentes subredes.\\
+
 
 % Sección de Referencias
 \section{Referencias}

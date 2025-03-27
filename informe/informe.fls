@@ -189,11 +189,6 @@ INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmri12.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmbxi10.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmr6.tfm
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc
-INPUT ./imagenes/1.png
-INPUT ./imagenes/1.png
-INPUT ./imagenes/1.png
-INPUT ./imagenes/1.png
-INPUT ./imagenes/1.png
 INPUT ./imagenes/2.png
 INPUT ./imagenes/2.png
 INPUT ./imagenes/2.png

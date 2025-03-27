@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.3.21)  27 MAR 2025 11:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.3.21)  27 MAR 2025 11:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -408,12 +408,12 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
                    \relax 
 l.41 \newpage
               [1]
-Underfull \hbox (badness 10000) in paragraph at lines 54--55
+Underfull \hbox (badness 10000) in paragraph at lines 55--56
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--64
+Underfull \hbox (badness 10000) in paragraph at lines 57--65
 
  []
 
@@ -478,7 +478,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 56--64
 \curly@shift=\dimen274
 \total@box@width=\dimen275
 
-Overfull \hbox (45.70743pt too wide) in paragraph at lines 80--81
+Overfull \hbox (45.70743pt too wide) in paragraph at lines 81--82
 [][] 
  []
 
@@ -523,7 +523,7 @@ Overfull \hbox (45.70743pt too wide) in paragraph at lines 80--81
 \curly@shift=\dimen314
 \total@box@width=\dimen315
 
-Overfull \hbox (53.11371pt too wide) in paragraph at lines 97--98
+Overfull \hbox (53.11371pt too wide) in paragraph at lines 98--99
 [][] 
  []
 
@@ -642,7 +642,7 @@ Overfull \hbox (53.11371pt too wide) in paragraph at lines 97--98
 \depth=\dimen426
 \totalheight=\dimen427
 
-Underfull \hbox (badness 10000) in paragraph at lines 159--160
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
 
  []
 
@@ -732,33 +732,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 159--160
 \depth=\dimen510
 \totalheight=\dimen511
  [5]
-Underfull \hbox (badness 10000) in paragraph at lines 308--309
+Underfull \hbox (badness 10000) in paragraph at lines 309--310
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 310--311
+Underfull \hbox (badness 10000) in paragraph at lines 311--312
 
  []
 
 [6]
-<imagenes/1.png, id=195, 462.22687pt x 341.77687pt>
-File: imagenes/1.png Graphic file (type png)
-<use imagenes/1.png>
-Package pdftex.def Info: imagenes/1.png  used on input line 315.
-(pdftex.def)             Requested size: 318.66948pt x 235.62811pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 312--318
+Underfull \hbox (badness 10000) in paragraph at lines 313--314
 
  []
 
-<imagenes/2.png, id=196, 460.72125pt x 350.05782pt>
+<imagenes/2.png, id=228, 460.72125pt x 350.05782pt>
 File: imagenes/2.png Graphic file (type png)
 <use imagenes/2.png>
-Package pdftex.def Info: imagenes/2.png  used on input line 322.
+Package pdftex.def Info: imagenes/2.png  used on input line 320.
 (pdftex.def)             Requested size: 318.66948pt x 242.12236pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 319--325
+Underfull \hbox (badness 10000) in paragraph at lines 317--323
+
+ []
+
+<imagenes/3.png, id=229, 464.4853pt x 351.56343pt>
+File: imagenes/3.png Graphic file (type png)
+<use imagenes/3.png>
+Package pdftex.def Info: imagenes/3.png  used on input line 328.
+(pdftex.def)             Requested size: 318.66948pt x 241.20036pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 325--331
 
  []
 
@@ -769,34 +773,30 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.325 \FloatBarrier
-                    <./imagenes/1.png (PNG copy)>]
-<imagenes/3.png, id=202, 464.4853pt x 351.56343pt>
-File: imagenes/3.png Graphic file (type png)
-<use imagenes/3.png>
-Package pdftex.def Info: imagenes/3.png  used on input line 330.
-(pdftex.def)             Requested size: 318.66948pt x 241.20036pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 327--333
-
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[8
+l.331 \FloatBarrier
+                    <./imagenes/2.png (PNG copy)>] [8
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.333 \FloatBarrier
-                    <./imagenes/2.png (PNG copy)>]
-<imagenes/4.png, id=208, 462.97969pt x 353.82187pt>
+l.331 \FloatBarrier
+                    <./imagenes/3.png (PNG copy)>]
+<imagenes/4.png, id=240, 462.97969pt x 353.82187pt>
 File: imagenes/4.png Graphic file (type png)
 <use imagenes/4.png>
-Package pdftex.def Info: imagenes/4.png  used on input line 338.
+Package pdftex.def Info: imagenes/4.png  used on input line 336.
 (pdftex.def)             Requested size: 318.66948pt x 243.53807pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 335--341
+Underfull \hbox (badness 10000) in paragraph at lines 333--339
+
+ []
+
+<imagenes/5.png, id=241, 464.4853pt x 350.05782pt>
+File: imagenes/5.png Graphic file (type png)
+<use imagenes/5.png>
+Package pdftex.def Info: imagenes/5.png  used on input line 346.
+(pdftex.def)             Requested size: 318.66948pt x 240.16739pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 343--349
 
  []
 
@@ -807,64 +807,45 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.342 \FloatBarrier
-                    <./imagenes/3.png (PNG copy)>]
-<imagenes/5.png, id=214, 464.4853pt x 350.05782pt>
-File: imagenes/5.png Graphic file (type png)
-<use imagenes/5.png>
-Package pdftex.def Info: imagenes/5.png  used on input line 348.
-(pdftex.def)             Requested size: 318.66948pt x 240.16739pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 345--351
+l.350 \FloatBarrier
+                    <./imagenes/4.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 352--353
 
  []
 
+<imagenes/6.png, id=247, 347.04657pt x 169.38281pt>
+File: imagenes/6.png Graphic file (type png)
+<use imagenes/6.png>
+Package pdftex.def Info: imagenes/6.png  used on input line 357.
+(pdftex.def)             Requested size: 318.66948pt x 155.53683pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Underfull \hbox (badness 10000) in paragraph at lines 354--360
+
+ []
 
 [10
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.352 \FloatBarrier
-                    <./imagenes/4.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 354--355
-
- []
-
-<imagenes/6.png, id=220, 347.04657pt x 169.38281pt>
-File: imagenes/6.png Graphic file (type png)
-<use imagenes/6.png>
-Package pdftex.def Info: imagenes/6.png  used on input line 359.
-(pdftex.def)             Requested size: 318.66948pt x 155.53683pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 356--362
-
- []
-
-[11
+l.361 A
+       l observar el mensaje seleccionado, vemos que en la capa 2 la direcci...
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.363 A
-       l observar el mensaje seleccionado, vemos que en la capa 2 la direcci...
-pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.363 A
+l.361 A
        l observar el mensaje seleccionado, vemos que en la capa 2 la direcci... <./imagenes/5.png (PNG copy)> <./imagenes/6.png (PNG copy)>]
-<imagenes/7.png, id=227, 465.23813pt x 351.56343pt>
+<imagenes/7.png, id=254, 465.23813pt x 351.56343pt>
 File: imagenes/7.png Graphic file (type png)
 <use imagenes/7.png>
-Package pdftex.def Info: imagenes/7.png  used on input line 366.
+Package pdftex.def Info: imagenes/7.png  used on input line 364.
 (pdftex.def)             Requested size: 318.66948pt x 240.81412pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 363--369
+Underfull \hbox (badness 10000) in paragraph at lines 361--367
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 371--372
+Underfull \hbox (badness 10000) in paragraph at lines 369--370
 
  []
 
@@ -969,25 +950,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 371--372
 \depth=\dimen610
 \totalheight=\dimen611
 
-Overfull \hbox (27.67642pt too wide) in paragraph at lines 381--383
+Overfull \hbox (27.67642pt too wide) in paragraph at lines 379--381
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 381--383
+Underfull \hbox (badness 10000) in paragraph at lines 379--381
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 384--385
+Underfull \hbox (badness 10000) in paragraph at lines 382--383
 
  []
 
-[12
-pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) has been already used, duplicate ignored
+[11
+pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.385 
+l.383 
        <./imagenes/7.png (PNG copy)>]
 \width=\dimen612
 \height=\dimen613
@@ -1110,16 +1091,61 @@ l.385
 \depth=\dimen730
 \totalheight=\dimen731
 
-Overfull \hbox (27.67642pt too wide) in paragraph at lines 394--397
+Overfull \hbox (27.67642pt too wide) in paragraph at lines 392--395
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 394--397
+Underfull \hbox (badness 10000) in paragraph at lines 392--395
 
  []
 
-[13] (./informe.aux
+
+Underfull \hbox (badness 10000) in paragraph at lines 398--399
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 400--401
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 408--409
+
+ []
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 417--418
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 425--426
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 433--434
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 437--438
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 441--442
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 445--447
+
+ []
+
+[13] [14] (./informe.aux
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
 )
@@ -1128,21 +1154,21 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `informe.out' has not changed.
-(rerunfilecheck)             Checksum: 7E70F3E9DD173F99DE4445496BB808D0;5648.
+(rerunfilecheck)             Checksum: 521E4B091571ADD5C3B28BE7E106AADB;8942.
  ) 
 Here is how much of TeX's memory you used:
- 11188 strings out of 474222
- 176225 string characters out of 5748733
+ 11193 strings out of 474222
+ 176258 string characters out of 5748733
  1950975 words of memory out of 5000000
- 33236 multiletter control sequences out of 15000+600000
+ 33235 multiletter control sequences out of 15000+600000
  611900 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,11n,79p,486b,524s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,11n,79p,891b,524s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbxi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on informe.pdf (14 pages, 401917 bytes).
+Output written on informe.pdf (15 pages, 380270 bytes).
 PDF statistics:
- 289 PDF objects out of 1000 (max. 8388607)
- 249 compressed objects within 3 object streams
- 54 named destinations out of 1000 (max. 500000)
- 276 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 325 PDF objects out of 1000 (max. 8388607)
+ 285 compressed objects within 3 object streams
+ 60 named destinations out of 1000 (max. 500000)
+ 319 words of extra memory for PDF output out of 10000 (max. 10000000)
 
