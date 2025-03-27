@@ -8,7 +8,8 @@
 \usepackage{float}               % Para anclar las imagenes a una posicion fija
 \usepackage{bytefield}           % Para dibujar diagramas PDU
 \usepackage{geometry}            % Para ajustar márgenes
-\usepackage{lmodern}
+\usepackage{placeins}
+
 \geometry{left=2.5cm, right=2.5cm, top=3cm, bottom=3cm}
 
 \title{El protocolo IPv6}
@@ -297,6 +298,100 @@ Con esta información, la PC0 puede hacer pings a la PC1 cuantas veces quiera. P
 
 \bigskip
 
+
+
+
+%aca martoooooo!!!! no tocar que me te cojo.
+\subsection{Non Local Delivery}
+
+\subsubsection{Configuracion el escenario}
+Para analizar el proceso en redes remotas, primero borraremos la informacion sobre neighbors en el Router 0 mediante el comando clear ipv6 neighbors y reseteamos la información.\\
+\subsubsection{Comienzo del escenario}
+Realizaremos un ping desde la PC0 a la PC2 que tiene la IP 2001:DB8:ACAD:2: :A/64, en el modo simulación para poder ver y analizar la lista de eventos.\\
+\subsubsection{Primer Evento en PC0}
+Al observar el primer evento en la PC0, que se trata de un mensaje ICMPv6, vemos que no hay información en la capa 2, ya que la PC0 todavía no sabe la MAC address de la PC2.\\
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{imagenes/1.png}
+    \caption{Primer ICMPv6 Pc0}
+\end{figure}\\
+\subsubsection{Segundo Evento en la PC0}
+Al observar el primer mensaje NDP en la PC0, vemos que es un Neighbor Solicitation, ya que es de tipo 0x87(135 en decimal) al igual que anteriormente en el Local Delivery. La dirección IPv6 de origen es la Link Local Address de la PC0, la cual es FE80::290:2BFF:FE89:2D86.\\
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{imagenes/2.png}
+    \caption{Primer NDP Pc0}
+\end{figure}\\
+\subsubsection{Próximo Evento ICMPv6 en la PC0}
+Buscamos el siguiente mensaje ICMPv6 que sale de la PC0. Comprobamos que ahora si tiene información en la capa 2. La MAC de origen es la MAC address de la PC0 y se utiliza la MAC address de la interfaz g0/0 del router como MAC de destino. Esto se debe a que la única forma de acceder a la PC2, desde la PC0, es utilizando el Router.\\
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{imagenes/3.png}
+    \caption{Siguiente ICMPv6 Pc0}
+\end{figure}\\
+\FloatBarrier
+\subsubsection{Primer evento ICMPv6 en R0}
+Observamos el primer evento ICMPv6 en el  Router 0 y comprobamos que la información de la capa 2 está vacía. Esto se debe a que el Router no conoce la MAC address de la PC2, ya que borramos la información de vecinos del Router, por lo que comenzará otro proceso NDP para descubrir la direccion desconocida. \\
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{imagenes/4.png}
+    \caption{ICMPv6 R0}
+\end{figure}\\
+
+\FloatBarrier
+
+\subsubsection{Evento ICMPv6 en la PC2}
+Observamos el próximo evento ICMPv6 en la PC2 y volvemos a ver que la capa 2 está vacía. Esto se debe a que la PC2 no conoce la MAC address para comunicarse con la PC0, por lo que comienza un proceso de NDP.\\
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{imagenes/5.png}
+    \caption{ICMPv6 Pc2}
+\end{figure}\\
+
+\FloatBarrier
+\subsubsection{Ultimos eventos ICMPv6}
+Al ir al ultimo conjunto de eventos ICMPv6, luego de haber finalizado todos los procesos de NDP, la PC2 ya conoce la MAC address del Router y a su vez, el Router conoce la MAC address de la PC0, por lo que la PC2 puede enviar mensajes de respuesta a la PC0 sin necesidad de ningun mensaje NDP.\\
+
+Esto lo podemos confirmar al reiniciar la simulación volver a hacer ping de la Pc0 a la Pc2 y notamos que no hubo ningún evento NDP. \\
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{imagenes/6.png}
+    \caption{Ningun NDP}
+\end{figure}\\
+\FloatBarrier
+Al observar el mensaje seleccionado, vemos que en la capa 2 la direccion MAC de destino es la dirección MAC de la interface G0/1 del Router, ya que este es el encargado de relacionar la red de la PC2 con la PC0.\\
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{imagenes/7.png}
+    \caption{ICMPv6 Pc2}
+\end{figure}\\
+\FloatBarrier
+\subsubsection{Modo Realtime}
+Ingresamos al modo realtime ejecutamos el comando show ipv6 neighbors y vemos la siguiente tabla:\\
+
+\bigskip
+\begin{bytefield}[boxformatting={\centering\itshape},bitwidth = 1.1em]{32}
+  \bitheader{0,8,16} \\
+  \bitbox{16}{IPv6 Address} & \bitbox{4}{Age} & \bitbox{8}{Link-layer Addr} & \bitbox{4}{State} & \bitbox{4}{Interface} \\
+  \bitbox{16}{2001:DB8:ACAD:1::A} & \bitbox{4}{0} & \bitbox{8}{0090.2B89.2D86} & \bitbox{4}{REACH} & \bitbox{4}{Gig0/0} \\
+  \bitbox{16}{2001:DB8:ACAD:2::A} & \bitbox{4}{0} & \bitbox{8}{000A.41E4.42D4} & \bitbox{4}{REACH} & \bitbox{4}{Gig0/1} \\
+  \bitbox{16}{FE80::20A:41FF:FEE4:42D4 } & \bitbox{4}{0} & \bitbox{8}{000A.41E4.42D4} & \bitbox{4}{REACH} & \bitbox{4}{Gig0/1} \\
+  \bitbox{16}{FE80::290:2BFF:FE89:2D86} & \bitbox{4}{0} & \bitbox{8}{0090.2B89.2D86} & \bitbox{4}{REACH} & \bitbox{4}{Gig0/0} \\
+\end{bytefield}\\
+Aquí vemos 4 direcciones, 2 Global Unicast Address (GUA) y 2 Link - Local Address(LLA) que corresponden a las PC0 y PC2. No vemos ninguna entrada que corresponda a la PC1 ya que no la utilizamos hasta este punto.\\
+\subsubsection{Ping de R0 a la Pc1}
+Realizamos un ping a la PC1 desde el Router y volvemos a ejecutar el comando show ipv6 neighbors:\\
+
+\begin{bytefield}[boxformatting={\centering\itshape},bitwidth = 1.1em]{32}
+    \bitheader{0,8,16} \\
+    \bitbox{16}{IPv6 Address} & \bitbox{4}{Age} & \bitbox{8}{Link-layer Addr} & \bitbox{4}{State} & \bitbox{4}{Interface} \\
+    \bitbox{16}{2001:DB8:ACAD:1::A} & \bitbox{4}{28} & \bitbox{8}{0090.2B89.2D86} & \bitbox{4}{REACH} & \bitbox{4}{Gig0/0} \\
+    \bitbox{16}{2001:DB8:ACAD:2::B} & \bitbox{4}{0} & \bitbox{8}{000A.41E4.42D4} & \bitbox{4}{REACH} & \bitbox{4}{Gig0/1} \\
+    \bitbox{16}{2001:DB8:ACAD:2::A} & \bitbox{4}{28} & \bitbox{8}{000A.41E4.42D4} & \bitbox{4}{REACH} & \bitbox{4}{Gig0/1} \\
+    \bitbox{16}{FE80::20A:41FF:FEE4:42D4 } & \bitbox{4}{28} & \bitbox{8}{000A.41E4.42D4} & \bitbox{4}{REACH} & \bitbox{4}{Gig0/1} \\
+    \bitbox{16}{FE80::290:2BFF:FE89:2D86} & \bitbox{4}{28} & \bitbox{8}{0090.2B89.2D86} & \bitbox{4}{REACH} & \bitbox{4}{Gig0/0} \\
+\end{bytefield}\\
+Vemos una nueva dirección correspondiente a la GUA de la PC1, ya que luego del ping hubo interacción con el router y este aprendió su dirección. IPv6.\\
 % Sección de Conclusiones
 \section{Conclusiones}
 Aquí se sintetizan los resultados obtenidos y se discuten las ventajas y desventajas de la autoconfiguración en IPv6, así como el impacto del proceso de Neighbor Discovery en el rendimiento de la red.

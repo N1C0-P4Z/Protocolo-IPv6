@@ -15,5 +15,16 @@
 \contentsline {subsubsection}{\numberline {2.1.7}Proximo paquete ICMPv6}{6}{subsubsection.2.1.7}%
 \contentsline {subsubsection}{\numberline {2.1.8}Ultimo evento de la lista}{6}{subsubsection.2.1.8}%
 \contentsline {subsubsection}{\numberline {2.1.9}Resetear la simulación}{6}{subsubsection.2.1.9}%
-\contentsline {section}{\numberline {3}Conclusiones}{6}{section.3}%
-\contentsline {section}{\numberline {4}Referencias}{7}{section.4}%
+\contentsline {subsection}{\numberline {2.2}Non Local Delivery}{6}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Configuracion el escenario}{6}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Comienzo del escenario}{7}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}Primer Evento en PC0}{7}{subsubsection.2.2.3}%
+\contentsline {subsubsection}{\numberline {2.2.4}Segundo Evento en la PC0}{7}{subsubsection.2.2.4}%
+\contentsline {subsubsection}{\numberline {2.2.5}Próximo Evento ICMPv6 en la PC0}{8}{subsubsection.2.2.5}%
+\contentsline {subsubsection}{\numberline {2.2.6}Primer evento ICMPv6 en R0}{9}{subsubsection.2.2.6}%
+\contentsline {subsubsection}{\numberline {2.2.7}Evento ICMPv6 en la PC2}{10}{subsubsection.2.2.7}%
+\contentsline {subsubsection}{\numberline {2.2.8}Ultimos eventos ICMPv6}{11}{subsubsection.2.2.8}%
+\contentsline {subsubsection}{\numberline {2.2.9}Modo Realtime}{13}{subsubsection.2.2.9}%
+\contentsline {subsubsection}{\numberline {2.2.10}Ping de R0 a la Pc1}{14}{subsubsection.2.2.10}%
+\contentsline {section}{\numberline {3}Conclusiones}{14}{section.3}%
+\contentsline {section}{\numberline {4}Referencias}{14}{section.4}%
