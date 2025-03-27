@@ -45,12 +45,8 @@ El protocolo IPv6 fue desarrollado para reemplazar a IPv4 debido a la necesidad 
 % Sección 1: Escenarios y Configuraciones
 \section{IPv6 SLAAC and EUI-64 Basics}
 \subsection{Configuración del Router en IPv6}
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.7\textwidth]{imagenes/lab1.png}
-  \caption{Red a ensayar}
-  \label{fig:lab1}
-\end{figure}
+
+%ACA VA UNA IMAGENNNN QUE NICO BORRO PARA NO GENERAL PROBLEMAS
 
 Mediante los siguientes comandos configuramos la Link Local Address del router a fe80::1 y la GUA a 2001:db8:acad:1::1/64.\\
 
@@ -79,7 +75,7 @@ Router(config-if)\#no shutdown\\
     \bitbox{16}{Link Local Address} & \bitbox{16}{FE80::\textbf{2E0:F9FF:FE98:8A07}}
   \end{rightwordgroup}
 \end{bytefield}
-\section{Router Solicitation}
+\subsection{Router Solicitation}
 \bigskip
 Luego entramos al modo simulación y cambiamos la configuración ipv6 de la pc de static a  auto-config, inmediatamente, la pc envía un mensaje de router solicitation. Donde la ip de origen es la LLA de la pc que se autoconfiguró mediante EUI-64 y la ip destino es la ALL routers multicast address.
 
@@ -97,7 +93,7 @@ Luego entramos al modo simulación y cambiamos la configuración ipv6 de la pc d
   \end{rightwordgroup}
 \end{bytefield}
 
-\section{Router Advertisement}
+\subsection{Router Advertisement}
 
 \bigskip
 
@@ -115,7 +111,8 @@ La PC aprende que se esta usando IPv6 y a la LLA del router que usará como gate
 \bigskip
 El router responde con el siguiente mensaje de Router Advertisement:
 
-\section*{Router Advertisement Message}
+\bigskip
+
 \begin{bytefield}[boxformatting={\centering\itshape},bitwidth = 1.1em]{32}
   \bitheader{0,8,16} \\
   \bitbox{8}{TYPE: 0x86} & \bitbox{8}{CODE: 0x00} & \bitbox{16}{CHECKSUM: 0x0000} \\
@@ -124,7 +121,8 @@ El router responde con el siguiente mensaje de Router Advertisement:
   \bitbox{32}{Retrans Timer: 0x00000000}
 \end{bytefield}
 
-\section*{Prefix Option}
+\bigskip
+\subsection*{Prefix Option}
 \begin{bytefield}[boxformatting={\centering\itshape},bitwidth = 1.1em]{32}
   \bitheader{0,8,16} \\
   \bitbox{8}{TYPE: 0x03} & \bitbox{8}{LENGTH: 0x04} & \bitbox{8}{PREFIX LEN: 64} & \bitbox{8}{RESERVED1} \\
@@ -148,13 +146,154 @@ Aquí la PC aprende el prefijo de red, su tamaño, el tipo y por cuanto tiempo e
 En este mensaje, la PC aprende la Link Layer Address del Router.
 
 % Sección 2: Escenario 2: Neighbor Discovery
-\section{Escenario 2: Neighbor Discovery y NDP}
-En esta sección se describe el proceso de descubrimiento de vecinos en IPv6, incluyendo:
+\section{Neighbor Discovery}
+
+%ACA VA UNA FOTO DEL ESCENARIO
+
+Configuramos las IPs de las PCs y el Router con los comandos que vimos en el apartado anterior. Luego nos aseguramos que el R0 no tenga información de sus vecinos con
+\bigskip
+
+\noindent R0\#show ipv6 neighbors\\
+
+\subsection{Local Delivery}
+
+Realizaremos un ping desde la consola de P0 a P1 en el modo simulación, filtrando los mensajes ICMPv6 y NDP para visualizarlos en la \textit{Event List} 
+
+\subsubsection{Mensaje NDP}
+
+En el tercer evento vemos que la PC0 envia un PDU NDP al Switch0. Este PDU va a ser de tipo 135 Neighbor Solicitation, con el objetivo de descubrir la dirección MAC de los otros dispositivos en la misma red local. El mensaje de Neighbor Solicitation se ve representado de la siguiente manera:
+
+\bigskip
+
+\begin{bytefield}[boxformatting={\centering\itshape},bitwidth = 1.1em]{32}
+  \bitheader{0,8,16} \\
+  \bitbox{8}{TYPE: 0x87} & \bitbox{8}{CODE: 0x00} & \bitbox{16}{CHECKSUM} \\
+  \bitbox{1}{R} & \bitbox{1}{S} & \bitbox{1}{O} & \bitbox{29}{Reserved} \\
+  \bitbox{32}{Target Address: 2001:DB8:ACAD:1::B}
+\end{bytefield}
+
+\bigskip
+
+En TYPE se muestra en hexadecimal 0x87, que en decimal es 135, confirmando que el mensaje es de tipo Neighbor Solicitation. En el 4to y 5to evento vemos que el Switch hizo forward del NDP a la PC1 y al Router.
+
+\bigskip
+
+La respuesta va a ser una PDU NDP de tipo Neighbor Advertisement, es decir Type 136(0x87 en hexadecimal).
+
+\bigskip
+
+\begin{bytefield}[boxformatting={\centering\itshape},bitwidth = 1.1em]{32}
+  \bitheader{0,8,16} \\
+  \bitbox{8}{TYPE: 0x88} & \bitbox{8}{CODE: 0x00} & \bitbox{16}{CHECKSUM} \\
+  \bitbox{1}{R} & \bitbox{1}{S} & \bitbox{1}{O} & \bitbox{29}{Reserved} \\
+  \bitbox{32}{Target Address: 2001:DB8:ACAD:1::B}
+\end{bytefield}
+
+\bigskip
+
+Esta respuesta llega al Switch, el cual nuevamente fordwardea por todas sus interfaces, menos por la que recibió el mensaje. La PC1 lo descarta y la PC0 lo acepta.
+
+\bigskip
+
+De esta manera mostramos cómo funcionan los mensajes de Neighbor Solicitation y Neighbor Advertisement. 
+
+\bigskip
+\subsubsection{Mensaje ICMPv6}
+
+En el primer evento, seleccionamos el mensaje ICMPv6 en la PC0, para analizar la PDU.
+
+%ACA VA UNA FOTOOOO seria el P2
+
+Observamos que es un mensaje ICMPv6 de TYPE 0x80, es decir 128 en decimal, lo que corresponde a un mensaje ECHO REQUEST, que cuenta con la siguiente estructura:
+
+\bigskip
+
+\begin{bytefield}[boxformatting={\centering\itshape},bitwidth = 1.1em]{32}
+  \bitheader{0,8,16} \\
+  \bitbox{8}{TYPE: 0x80} & \bitbox{8}{CODE: 0x00} & \bitbox{16}{CHECKSUM: 0x0000} \\
+  \bitbox{16}{IDENTIFIER: 2} & \bitbox{16}{SEQUENCE NUMBER: 1}
+\end{bytefield}
+
+\bigskip
+
+También podemos observar que la sección Out Layers del OSI Model se resuelve en la layer 3.
+
+\bigskip
+
+Luego presionamos en Next Layer y nos aparece una salida con lo sucedido en la Layer 2.
+
+\bigskip
+
+Nos explica que el next hop es una dirección unicast, por lo que el proceso de Neighbor Discovery la busca en la neighbor table. Luego ve que el next hop no se encuentra en la tabla, por lo que el protocolo NDP envía una neighbor solicitation, comenzando el proceso visto en el apartado anterior.
+
+\bigskip
+
+\subsubsection{Cómo recibe el Router los mensajes del protocolo NPD?}
+
+Seleccionamos el próximo evento, el mensaje NDP en la PC0 y observamos que la dirección de destino cambió por una dirección multicast de enlace local (FF02::) que utiliza el proceso de Neighbor Discovery. 
+
+\bigskip
+
+En la layer 2 vemos que tenemos la dirección MAC de origen de la PC0 y la dirección MAC de destino que es 3333.FF00.000B, que es una dirección de multidifusión. Lo que tiene de particular esta dirección es que pertenece al rango de direcciones de multidifusión de la layer 2, asignadas a IPv6. Los ultimo 32 bits de la dirección MAC coinciden con los últimos 32 bits de la dirección IPv6 de multidifusión.
+
+\bigskip
+
+Esto permite que el descubrimientos de vecinos sea mucho mas eficiente en redes IPv6.
+
+\bigskip
+
+\subsubsection{Próximo evento en el Switch 0}
+
+Seleccionamos el próximo evento que ocurre en el Switch 0, y observamos que no ocurren cambios en la entrada y salida en la capa 2. Esto ocurre ya que el switch no altera o cambia nada en las tramas, solo las reenvía por todos sus puertos, excepto por el de entrada.
+
+\bigskip
+
+\subsubsection{Información sobre el primer evento en PC1}
+
 \begin{itemize}
-  \item Configuración de las interfaces en el router y dispositivos.
-  \item Flujo de mensajes de NDP y explicación de cada uno (por ejemplo, RS y RA).
-  \item Análisis de los PDUs involucrados y la conversión de direcciones MAC.
+    \item Ethernet Destination Address: \textit{3333.FF00.000B}
+    \item Ethernet Source Address: \textit{0090.0C5B.E7DC}
+    \item IPv6 Source Address: \textit{2001:DB8:ACAD:1::B}
+    \item IPv6 Destination Address: \textit{FF02::1:FF00:B}
 \end{itemize}
+
+\bigskip
+
+\subsubsection{Falta de Información en Out Layers}
+
+Al seleccionar el primer evento en el Router 0, en el que el router recibe el mensaje NDP forwardeado desde el Switch, observamos que en las Out Layers no hay información porque la dirección IP destino del mensaje NDP es la de la PC1, y no la del Router. El Router entiende que el mensaje no es para él y la descarta.
+
+\bigskip
+
+\subsubsection{Proximo paquete ICMPv6}
+
+Seleccionamos el próximo evento ICMPv6 de la PC0 y observamos que efectivamente tiene toda la información para comunicarse con la PC1.
+
+\bigskip
+
+%ACA VA UNA FOTOOOOOOOOO
+
+Efectivamente la PC0 tiene la dirección de IP destino y la dirección MAC de destino de la PC1, por lo que ahora la comunicación entre PCs debería ser exitosa.
+
+\bigskip
+
+\subsubsection{Ultimo evento de la lista}
+
+En el último evento de la lista, que es un mensaje ICMPv6 de PC0, vemos que es un ECHO MESSAGE TYPE 129, es decir, \textit{Echo Reply}.
+
+\bigskip
+
+\subsubsection{Resetear la simulación}
+
+Reseteamos la simulación y volvemos a hacer un ping entre la PC0 y la PC1 mediante comandos, y observamos la ausencia del proceso Neighbor Discovery, ya que la PC0 ya conoce la MAC de la PC1 gracias al proceso realizado anteriormente.
+
+\bigskip
+
+%ACA VA UNA FOTOOOOOOOOOOOOOOOOOO
+
+Con esta información, la PC0 puede hacer pings a la PC1 cuantas veces quiera. Por esto sólo observamos los eventos ICMPv6 que van del PC0 al Switch, del Switch a la PC1 y las respuestas correspondientes. 
+
+\bigskip
 
 % Sección de Conclusiones
 \section{Conclusiones}
